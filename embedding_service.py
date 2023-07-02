@@ -28,7 +28,7 @@ def generate_adav2_embeddings(df_to_embed: pd.core.frame.DataFrame) -> pd.core.f
 
 
 def load_data() ->  pd.core.frame.DataFrame:
-    df_statements=pd.read_csv(os.path.join(os.getcwd(),'data_to_embed.csv')) # This assumes that you have placed the bill_sum_data.csv in the same directory you are running Jupyter Notebooks
+    df_statements=pd.read_csv(os.path.join(os.getcwd(),'data_to_embed.csv'), quotechar='"') # This assumes that you have placed the bill_sum_data.csv in the same directory you are running Jupyter Notebooks
     pd.options.mode.chained_assignment = None
     return df_statements
 

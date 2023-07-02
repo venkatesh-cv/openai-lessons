@@ -62,8 +62,9 @@ def get_context(search_query:str) -> None:
 
 if __name__ == "__main__":
     index = _init_pinecone_index()
-    #index.delete(delete_all=True)
-    #_prime_database(index)
+    # index.delete(delete_all=True)
+    _prime_database(index)
     #search("what do you know about fruits",3)
-    context_results = get_context("what do you know about fruits")
-    print(chat(context=context_results, query="what do you know about fruits"))
+    query = "write a validation rule that checks if the patient is an adult for any cosmetic surgery related procedure"
+    context_results = get_context(query)
+    print(chat(context=context_results, query=query))

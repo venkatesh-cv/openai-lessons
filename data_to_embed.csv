@@ -11,3 +11,10 @@ id,context
 9,"Vice president of the US holidays on the weekend"
 10,"July 4th is the next US holiday"
 11,"Water melons are also red"
+12, Mary and Peter got married in 2001
+13, Mary gave birth to a son David in 2009
+14, Peter is working in daily mirror as a senior photographer
+15, He owns the sports section along with Mike and Mitch who are the Sports Executive Director and Media executive directors respectively
+16, Sports is crucial to daily mirror's circulation
+17, if claim.department is null then set claim.status = HOLD is an example of a validation Rules
+18, "if claim.procedurecodes.any('a') then claim.procedurecodes.replace('a' 'x') is an example of a transformation Rules"
