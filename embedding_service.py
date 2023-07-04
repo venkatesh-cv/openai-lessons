@@ -13,7 +13,7 @@ import tiktoken
 
 # This encodes the reference data as BPE tokens for GPT models. 
 # This is not the vectorized values. But a preprocessing step
-def generate_bpe_tokens(df_to_embed) -> pd.core.frame.DataFrame:
+def generate_bpe_tokens(df_to_embed:pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
     tokenizer = tiktoken.encoding_for_model(settings().bpe_encoding_for_model)
     df_to_embed['n_tokens'] = df_to_embed["context"].apply(lambda x: len(tokenizer.encode(x)))
     df_to_embed = df_to_embed[df_to_embed.n_tokens<8192]
@@ -22,7 +22,7 @@ def generate_bpe_tokens(df_to_embed) -> pd.core.frame.DataFrame:
 
 
 def generate_adav2_embeddings(df_to_embed: pd.core.frame.DataFrame) -> pd.core.frame.DataFrame:
-    df_to_embed = generate_bpe_tokens(df_to_embed)
+    #df_to_embed = generate_bpe_tokens(df_to_embed)
     df_to_embed['values'] = df_to_embed["context"].apply(lambda x : get_embedding(x, engine = settings().embedding_engine)) # engine should be set to the deployment name you chose when you deployed the text-embedding-ada-002 (Version 2) model
     return df_to_embed
 
@@ -35,5 +35,5 @@ def load_data() ->  pd.core.frame.DataFrame:
 if(__name__ == "__main__"):
     configure_openai(openai)
     df_statements = load_data()
-    df_statements = generate_adav2_embeddings(df_statements)
+    #df_statements = generate_adav2_embeddings(df_statements)
     print(df_statements)

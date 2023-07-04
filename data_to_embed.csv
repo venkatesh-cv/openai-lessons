@@ -1,20 +1,20 @@
-id,context
-0,"apples are red"
-1,"bannanas are yellow"
-2,"Kamala Harris is the vice president of the US"
-3,"Kamala Harris loves the color yellow"
-4,"Mondays are boring"
-5,"Tuesdays are tiring"
-6,"Weekdays are a buzz kill"
-7,"Weekends are the best"
-8,"There are hardly any cars on the road on the weekends"
-9,"Vice president of the US holidays on the weekend"
-10,"July 4th is the next US holiday"
-11,"Water melons are also red"
-12, Mary and Peter got married in 2001
-13, Mary gave birth to a son David in 2009
-14, Peter is working in daily mirror as a senior photographer
-15, He owns the sports section along with Mike and Mitch who are the Sports Executive Director and Media executive directors respectively
-16, Sports is crucial to daily mirror's circulation
-17, if claim.department is null then set claim.status = HOLD is an example of a validation Rules
-18, "if claim.procedurecodes.any('a') then claim.procedurecodes.replace('a' 'x') is an example of a transformation Rules"
+id,context,tags
+0,"apples are red","fruits"
+1,"bannanas are yellow","fruits"
+2,"Kamala Harris is the vice president of the US","USA"
+3,"Kamala Harris loves the color yellow","USA"
+4,"Mondays are boring", "General"
+5,"Tuesdays are tiring", "General"
+6,"Weekdays are a buzz kill","General"
+7,"Weekends are the best","General"
+8,"There are hardly any cars on the road on the weekends","Traffic"
+9,"Vice president of the US holidays on the weekend","USA"
+10,"July 4th is the next US holiday","Holidays"
+11,"Water melons are also red","fruits"
+12, Mary Jane and Peter Knowles got married in 2001,"spiderman"
+13, Mary gave birth to a son David in 2009,"spiderman"
+14, Peter is working in daily mirror as a senior photographer,"spiderman"
+15, Peter owns the sports section of daily mirror along with Mike and Mitch who are the Sports Executive Director and Media executive directors respectively,"spiderman"
+16, Sports is crucial to daily mirror's circulation,"spiderman"
+17, if claim.department == null then set claim.status = 'HOLD' is an example of a validation Rule,"rules"
+18, "if claim.procedurecodes.any('a') then claim.procedurecodes.replace('a' 'x') is an example of a transformation Rule","rules"
