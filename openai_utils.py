@@ -6,6 +6,7 @@ from openai_config import configure_openai, openai_settings
 configure_openai(openai=openai)
 
 def chat(context:str, query:str):    
+  print("context:%s \n\nquery:%s \n" % (context, query))
   response = openai.ChatCompletion.create(
     engine =openai_settings.chat_engine,
     messages = [{"role":"system","content":context},{"role":"user","content":query}],

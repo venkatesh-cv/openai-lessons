@@ -10,6 +10,7 @@ class OpenAI_Config:
     _deployment_endpoint = None
     _bpe_encoding_for_model = None
     _embeddings_length = None
+    _temperature = None
 
     def __init__(self) -> None:
         self._api_key = os.getenv("OPENAI_API_KEY")
@@ -20,6 +21,7 @@ class OpenAI_Config:
         self._deployment_endpoint = self._endpoint+"/openai/deployments?api-version=" + self._api_version 
         self._bpe_encoding_for_model = "gpt-4"
         self._embeddings_length = 1536
+        self._temperature = 0.2
 
     @property
     def endpoint(self) -> str:
@@ -52,6 +54,10 @@ class OpenAI_Config:
     @property
     def embeddings_length(self) -> int:
         return self._embeddings_length
+    
+    @property
+    def temperature(self) -> float:
+        return self._temperature
 
 openai_settings = OpenAI_Config()
 def settings() -> OpenAI_Config:
