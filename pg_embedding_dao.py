@@ -6,7 +6,7 @@ import pandas as pd
 
 def connection():
     conn = psycopg2.connect(database=pg_vector_config.db_name,
-                        host=pg_vector_config.db_host,
+                        host=pg_vector_config.db_host_localhost,
                         user=pg_vector_config.db_user,
                         password=pg_vector_config.db_password,
                         port=pg_vector_config.db_port)

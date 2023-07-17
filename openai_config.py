@@ -1,7 +1,7 @@
 import os
 import openai
 class OpenAI_Config:
-    _endpoint = "https://oainpusegaistudygroup01.openai.azure.com/"
+    _base_url = "https://oainpusegaistudygroup01.openai.azure.com/"
     _embedding_engine = None
     _chat_engine = None
     _api_key = None
@@ -18,14 +18,14 @@ class OpenAI_Config:
         self._api_version = "2023-03-15-preview"
         self._chat_engine = "gpt-35-turbo-0301"
         self._embedding_engine = "text-embedding-ada-002"
-        self._deployment_endpoint = self._endpoint+"/openai/deployments?api-version=" + self._api_version 
+        self._deployment_endpoint = self._base_url+"/openai/deployments?api-version=" + self._api_version 
         self._bpe_encoding_for_model = "gpt-4"
         self._embeddings_length = 1536
-        self._temperature = 0.2
+        self._temperature = 0
 
     @property
-    def endpoint(self) -> str:
-        return self._endpoint
+    def base_url(self) -> str:
+        return self._base_url
     
     @property
     def embedding_engine(self) -> str:
@@ -66,7 +66,7 @@ def settings() -> OpenAI_Config:
 
 def configure_openai(openai: openai) -> openai:
     openai.api_type = openai_settings.api_type
-    openai.api_base = openai_settings.endpoint
+    openai.api_base = openai_settings.base_url
     openai.api_version = openai_settings.api_version
     openai.api_key = openai_settings.api_key
     return openai
@@ -74,5 +74,5 @@ def configure_openai(openai: openai) -> openai:
 if __name__ == "__main__" :
     print (openai_settings.chat_engine)
     print (openai_settings.embedding_engine)
-    print (openai_settings.endpoint)
+    print (openai_settings.base_url)
     print (openai_settings.api_key)

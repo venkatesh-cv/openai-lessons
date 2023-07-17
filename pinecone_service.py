@@ -60,8 +60,10 @@ def _get_context(index:pinecone.GRPCIndex, search_query:str, tags:list[str] = []
 
 def chat_using_pinecone(query:str, tags:list[str] = []) -> None:
     index = _init_pinecone_index()
+    print("initialized pinecone")
     index.delete(delete_all=True)
     _prime_database(index)
+    print("primed pinecone vector database")
     context_results = _get_context(index,query, tags)
     print(chat(context=context_results, query=query))
 
