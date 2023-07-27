@@ -2,9 +2,8 @@ from openai_utils import get_embeddings, chat
 from embedding_service import generate_adav2_embeddings, load_data
 import pandas as pd
 import pandas.core.frame as df
-from pinecone_config import pinecone_settings
 from openai_config import openai_settings
-import pg_embedding_dao
+import pg_vector_dao
 
 index = None
 
@@ -16,11 +15,11 @@ def _get_embedded_data() -> pd.core.frame.DataFrame:
 
 def _insert_into_pgvectordb(df_statements:df.DataFrame):
     #print(df_statements)
-    pg_embedding_dao.insert_embeddings(df_statements)
+    pg_vector_dao.insert_embeddings(df_statements)
 
 def _search(text:str, limit = 5, tags :list[str]= []):
     encoded_query = get_embeddings(text)
-    result = pg_embedding_dao.query_embeddings(str(encoded_query), limit, tags)
+    result = pg_vector_dao.query_embeddings(str(encoded_query), limit, tags)
     #print (result)
     return result
 

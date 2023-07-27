@@ -16,6 +16,6 @@ def chat_using_pgvector(query:str, tags:list[str]) -> None:
     #print(context_results)
     print(chat(context=context_results, query=query))
 if __name__ == "__main__":
-    query = "write a hold rule that checks if a patient is an adult before approving a cosmetic procedure"
-    tags = ["rules"]
+    query = "who is kamala harris"
+    tags = ["government"]
     chat_using_pgvector(query, tags)

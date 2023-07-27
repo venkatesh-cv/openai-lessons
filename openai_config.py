@@ -15,10 +15,10 @@ class OpenAI_Config:
     def __init__(self) -> None:
         self._api_key = os.getenv("OPENAI_API_KEY")
         self._api_type = "azure"
-        self._api_version = "2023-03-15-preview"
-        self._chat_engine = "gpt-35-turbo-0301"
+        self._api_version = "2023-07-01-preview"
+        self._chat_engine = "gpt-35-turbo-16k-0613"
         self._embedding_engine = "text-embedding-ada-002"
-        self._deployment_endpoint = self._base_url+"/openai/deployments?api-version=" + self._api_version 
+        self._deployment_endpoint = self._base_url+"openai/deployments/"+self._chat_engine+"/chat/completions?api-version=" + self._api_version 
         self._bpe_encoding_for_model = "gpt-4"
         self._embeddings_length = 1536
         self._temperature = 0
@@ -58,7 +58,11 @@ class OpenAI_Config:
     @property
     def temperature(self) -> float:
         return self._temperature
-
+    
+    @property
+    def completions_endpoint(self) -> str:
+        return self._deployment_endpoint
+    
 openai_settings = OpenAI_Config()
 def settings() -> OpenAI_Config:
     return openai_settings
