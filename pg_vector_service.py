@@ -29,7 +29,7 @@ def prime_database() -> None:
 
 def get_context(search_query:str, tags:list[str] = []) -> str:
     results = _search(search_query,limit=5, tags= tags)
-    context_results = ' '.join(list(row[1] for row in results))
+    context_results = ' '.join(list(row[1]+","+row[2] for row in results))
     return context_results
 
 if __name__ == "__main__":

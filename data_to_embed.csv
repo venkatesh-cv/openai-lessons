@@ -1,20 +1,1251 @@
-id,context,tags
-0,"apples are red","fruits,color"
-1,"bannanas are yellow","fruits,color"
-2,"Kamala Harris is the vice president of the US","USA,government"
-3,"Kamala Harris loves the color yellow","USA,government,color"
-4,"Mondays are boring", "general"
-5,"Tuesdays are tiring", "general"
-6,"Weekdays are a buzz kill","general"
-7,"Weekends are the best","general"
-8,"There are hardly any cars on the road on the weekends","traffic"
-9,"Vice president of the US holidays on the weekend","USA"
-10,"July 4th is the next US holiday","holidays"
-11,"Water melons are also red","fruits,color"
-12,Mary Jane and Peter Knowles got married in 2001,"spiderman,marvel"
-13,"When married to Peter, Mary gave birth to a son David in 2009","spiderman,marvel"
-14,Peter is working in daily mirror as a senior photographer,"spiderman,marvel"
-15,Peter owns the sports section of daily mirror along with Mike and Mitch who are the Sports Executive Director and Media executive directors respectively,"spiderman,marvel"
-16,Sports is crucial to daily mirror's circulation,"spiderman,marvel"
-17,if claim.department == null then set claim.status = 'HOLD' is an example of a validation Rule,"rules"
-18,"if claim.procedurecodes.any('a') then claim.procedurecodes.replace('a' 'x') is an example of a transformation Rule","rules"
+id,context,response,tags
+0,"what color is an apple","apples are red","fruits,color"
+1,"what color is an bannana","bannanas are yellow","fruits,color"
+2,"who is Kamala Harris","Kamala Harris is the vice president of the US","USA,government"
+3,"what color does Kamala Harris like","Kamala Harris loves the color yellow","USA,government,color"
+4,"what do you think of Mondays","Mondays are boring", "general"
+5,"what do you think of Tuesdays","Tuesdays are tiring", "general"
+6,"what do you think of weekdays in general","Weekdays are a buzz kill","general"
+7,"what do you think of weekends","Weekends are the best","general"
+8,"Why do you let your kids play out on the street on weekends","There are hardly any cars on the road on the weekends","traffic"
+9,"Does the US vice president have days off work","Vice president of the US holidays on the weekend","USA"
+10,"when is the next US holiday in July","July 4th is the next US holiday","holidays"
+11,"what color is a Water Melon","Water melons are also red","fruits,color"
+12,"Did Peter knowles and his love interest Mary Jane get married",Mary Jane and Peter Knowles got married in 2001,"spiderman,marvel"
+13,"Do Peter knowles and Mary jane have kids","When married to Peter, Mary gave birth to a son David in 2009","spiderman,marvel"
+14,"What does Peter knowles do for work",Peter is working in daily mirror as a senior photographer,"spiderman,marvel"
+15,"what is he at Daily mirror",Peter owns the sports section of daily mirror along with Mike and Mitch who are the Sports Executive Director and Media executive directors respectively,"spiderman,marvel"
+16,"Is the daily mirror's sports section appreciated by the public",Sports is crucial to daily mirror's circulation,"spiderman,marvel"
+17,"Give me a sample validation rule",if claim.department == null then set claim.status = 'HOLD' is an example of a validation Rule,"rules"
+18,"Give me a sample hold rule","if claim.procedurecodes.any('a') then claim.procedurecodes.replace('a' 'x') is an example of a transformation Rule","rules"
+19,"Give Business name for DecisionResponse.activeInsurance.acceptsAssignment","Accepts Assignment ",bca
+20,"Give Business name for PatientOrInsuranceBKM.Get Active Case Policies ( refPatientInsurances:DecisionResponse.refData.patientInsurances )","Active's Case Policies ",bca
+21,"Give Business name for PatientOrInsuranceBKM.Get Active Claim Submission Category(DecisionResponse.activeInsurance.insurancePackage.claimSubmissionCategory)","Active \""Claim Submission Category ID ",bca
+22,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.addons","Active Service Type Add On ",bca
+23,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.spinalManipulation.acuteManifestationDate","Acute Manifestation Date ",bca
+24,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.adjudicationProgramId","Adjudication Program ID ",bca
+25,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.ubForm.admissionHour","Admission Hour ",bca
+26,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider","Admitting Provider ",bca
+27,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.address","Admitting Provider Address ",bca
+28,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.address.street1","Admitting Provider Address Line 1 ",bca
+29,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.address.street2","Admitting Provider Address Line 2 ",bca
+30,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.address.city","Admitting Provider City ",bca
+31,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.entityType","Admitting Provider Entity Type ",bca
+32,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.entityType.id","Admitting Provider Entity Type ID ",bca
+33,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.fax","Admitting Provider Fax ",bca
+34,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.firstName","Admitting Provider First Name ",bca
+35,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.id","Admitting Provider ID ",bca
+36,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.lastName","Admitting Provider Last Name ",bca
+37,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.lastNameUnstripped","Admitting Provider Last Name With Special Characters ",bca
+38,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.middleInitial","Admitting Provider Middle Initial ",bca
+39,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.nameSuffix","Admitting Provider Name Suffix ",bca
+40,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.admittingProviderNumber.npi","Admitting Provider NPI ",bca
+41,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.admittingProviderNumber","Admitting Provider Number ",bca
+42,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.pecosEnrollmentYN","Admitting Provider PECOS Enrolled Flag ",bca
+43,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.pecosMatchYN","Admitting Provider PECOS Match Flag ",bca
+44,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.address.phone","Admitting Provider Phone ",bca
+45,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.SpecialtyId","Admitting Provider Specialty ID ",bca
+46,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.address.state","Admitting Provider State ",bca
+47,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.ansiSpecialtyAnsiCode","Admitting Provider Taxonomy Code ",bca
+48,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.ansiSpecialtyId","Admitting Provider Taxonomy ID ",bca
+49,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.ansiSpecialtyName","Admitting Provider Taxonomy Name ",bca
+50,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.type.id","Admitting Provider Type ID ",bca
+51,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.admittingProvider.address.zip","Admitting Provider ZIP Code ",bca
+52,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.allowableCategoryId","Allowable Category ID ",bca
+53,"Give Business name for DecisionResponse.scrubbedClaim.claim.ambulance.isAmbulance","Ambulance Claim Flag ",bca
+54,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.settings.anesthesia.claimType","Anesthesia Charge Formatting ",bca
+55,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.providers[item.providerType = Supervising Provider Type ID].id","Anesthesia Directing Provider Type ",bca
+56,"Give Business name for First Charge.anesthesiaTimeSheetData.procedureCode","Anesthesia Flag Px ",bca
+57,"Give Business name for DecisionResponse.scrubbedClaim.claim.anesthesia.settings.firstLastLongest","Anesthesia Provider Priority ",bca
+58,"Give Business name for DecisionResponse.scrubbedClaim.claim.anesthesia.settings","Anesthesia Settings ",bca
+59,"Give Business name for First Charge.anesthesiaTimeSheetData.anesthesiaTimeSheetEntries","Anesthesia Time Sheet Entries ",bca
+60,"Give Business name for First Charge.anesthesiaTimeSheetData","Anesthesia Time Sheet Flag ",bca
+61,"Give Business name for DecisionResponse.scrubbedClaim.claim.anesthesia.typeId","Anesthesia Type ",bca
+62,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.specialtyCode","Ansi Specialty Code ",bca
+63,"Give Business name for ProviderBKM.Fetch Ansi Specialty Code( ansiSpecialtyId: DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber.ansiSpecialtyId, decisionResponse: Decision Response )"","AnsiSpecialtyAnsiCode ",bca
+64,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.copayAmount","Appointment Copay ",bca
+65,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.date","Appointment Date ",bca
+66,"Give Business name for DateBKM.Fetch Day of Week Details(DateBKM.Convert Date to String(DecisionResponse.scrubbedClaim.claim.appointment.date))","Appointment Day Of The Week ",bca
+67,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.id","Appointment ID ",bca
+68,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment","Appointment Linked Flag ",bca
+69,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.startTime","Appointment Start Time ",bca
+70,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.appointmentType.classId","Appointment Type Class ID ",bca
+71,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.appointmentType.id","Appointment Type ID ",bca
+72,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.appointmentType.name","Appointment Type Name ",bca
+73,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.appointmentType.shortName","Appointment Type Short Name ",bca
+74,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.cmnQuestions","Are CMN Questions Answered ",bca
+75,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.consistentWithAccountYN","Are your findings consistent with patient account? ",bca
+76,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.credentialed.asc","ASC Credentialed ",bca
+77,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.postOperativeCare.assumedCareDate","Assumed Care Date ",bca
+78,"Give Business name for DecisionResponse.scrubbedClaim.claim.attachments","Attachment ",bca
+79,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.paperWork.attachmentControlNumber","Attachment Control Number ",bca
+80,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.paperWork.attachmentType","Attachment Report Type Code ",bca
+81,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.paperWork.attachmentTransmissionCode","Attachment Transmission Code ",bca
+82,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider","Attending Provider ",bca
+83,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.address.street1","Attending Provider Address Line 1 ",bca
+84,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.address.city","Attending Provider City ",bca
+85,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.entityType.id","Attending Provider Entity Type ID ",bca
+86,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.firstName","Attending Provider First Name ",bca
+87,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.id","Attending Provider ID ",bca
+88,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.lastName","Attending Provider Last Name ",bca
+89,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.middleInitial","Attending Provider Middle Initial ",bca
+90,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.nameSuffix","Attending Provider Name Suffix ",bca
+91,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.attendingProviderNumber.npi","Attending Provider NPI ",bca
+92,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.attendingProviderNumber.providerNumber","Attending Provider Number ",bca
+93,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.specialtyId","Attending Provider Speciality ID ",bca
+94,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.address.state","Attending Provider State ",bca
+95,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.ansiSpecialtyAnsiCode","Attending Provider Taxonomy Code ",bca
+96,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.address.zip","Attending Provider ZIP Code ",bca
+97,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.fromDate","Authorization Effective From Date ",bca
+98,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.toDate","Authorization Effective To Date ",bca
+99,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.notes","Authorization Notes ",bca
+100,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.authorizationNumber","Authorization Number ",bca
+101,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization","Authorization Number Entity ",bca
+102,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.typeId","Authorization Type ID ",bca
+103,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.visitsIn Production","Authorization Visits/Units Approved ",bca
+104,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.visitsLeft","Authorization Visits/Units Remaining ",bca
+105,"Give Business name for DecisionResponse.scrubbedClaim.claim.autoAccidentState","Auto Accident State ",bca
+106,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.autoFormatting","Auto Formatting ",bca
+107,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.settings.anesthesia.directionModifierYN","Automate Anesthesia Level Of Direction Modifier Flag ",bca
+108,"Give Business name for DecisionResponse.scrubbedClaim.claim.anesthesia.settings.unitOfMeasure","Automate Anesthesia Minutes Per Unit ",bca
+109,"Give Business name for DecisionResponse.scrubbedClaim.claim.batchSpecialHandling","Batch Special Handling ",bca
+110,"Give Business name for DecisionResponse.scrubbedClaim.claim.billingGroup","Billing Group ",bca
+111,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimSubmissionCategory.billingTypeId","Billing Type ID ",bca
+112,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.bundleModifiers","Bundle Modifiers Entity ",bca
+113,"Give Business name for Decision Context.DecisionResponse.refData.bundlingErrors","Bundling Error List ",bca
+114,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.businessRelationship","Business Relationship ",bca
+115,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.capwizards","Capitation Policies ",bca
+116,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.casePolicyId","Case Policy Type ID ",bca
+117,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.changeInPatientCondition","Change In Patient Condition ",bca
+118,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.changeInTreatmentPlan","Change In Treatment Plan ",bca
+119,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.changeInWorkStatus","Change In Work Status ",bca
+120,"Give Business name for DecisionResponse.refData.changeSupervisingProviders","Change Supervising Providers ",bca
+121,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.chargeAmounts","Charge Amounts ",bca
+122,"Give Business name for First Charge.anesthesiaYN","Charge Anesthesia Flag ",bca
+123,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.allowable.amount","Charge Expected Allowed Amount ",bca
+124,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.fromDate","Charge From Date ",bca
+125,"Give Business name for DecisionResponse.refData.chargeNotes","Charge Notes ",bca
+126,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.toDate","Charge To Date ",bca
+127,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges","Charges ",bca
+128,"Give Business name for Reference Data.clinicalEncounters.checkOutBillFlag","Checkout Billing Flag ",bca
+129,"Give Business name for Reference Data.clinicalEncounters.checkOutProcedureCode","Checkout Procedure Code ",bca
+130,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.chemicalToxicCompoundsYN","Chemical Or Toxic Compounds Involved? ",bca
+131,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.chemoDrugDate","Chemo Drug Date ",bca
+132,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.chemoDrugName","Chemo Drug Name ",bca
+133,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimRuleCategory.crcChildList","ChildCRC ",bca
+134,"Give Business name for Reference Data.claimAuditDetails","Claim Audit Details ",bca
+135,"Give Business name for DecisionResponse.scrubbedClaim.claim.batchClaimByKey","Claim Batch By ",bca
+136,"Give Business name for DecisionResponse.scrubbedClaim.claim.createdBy","Claim Created By ",bca
+137,"Give Business name for DecisionResponse.scrubbedClaim.claim.createdDate","Claim Created Date ",bca
+138,"Give Business name for DecisionResponse.scrubbedClaim.claim.serviceDate","Claim Date Of Service ",bca
+139,"Give Business name for DecisionResponse.scrubbedClaim.claim.diagnosis.codes","Claim Diagnosis Code ",bca
+140,"Give Business name for DecisionResponse.scrubbedClaim.claim.diagnosis.icdCodeAll.id","Claim Diagnosis ID ",bca
+141,"Give Business name for Reference Data.claimDocumentDetails","Claim Document Details ",bca
+142,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimFilingIndicator.id","Claim Filing Indicator ID ",bca
+143,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormat","Claim Format ID ",bca
+144,"Give Business name for ClaimBKM.Is Claim Format PaperDecisionResponse","Claim Format Type ",bca
+145,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormatVersionId","Claim Format Version ID ",bca
+146,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.clia.outsideFacilityFlag","Claim Level CLIA Required For Outside Facility Flag ",bca
+147,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup","Claim Medical Group ",bca
+148,"Give Business name for DecisionResponse.activeInsurance.workersCompensation.claimNumber","Claim Number ",bca
+149,"Give Business name for DecisionResponse.scrubbedClaim.claim.status.previouslyBilled","Claim Previously Billed Flag ",bca
+150,"Give Business name for Decision Context.DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.ansiSpecialtyAnsiCode","Claim Provider Ansi Speciality Code ",bca
+151,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.relatedToOtherAccident","Claim Related To Other Accident ",bca
+152,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.encounterCode.rhc","Claim RHC Encounter Code ",bca
+153,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimRuleCategory.id","Claim Rule Category ID ",bca
+154,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimRuleCategory.name","Claim Rule Category Name ",bca
+155,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings","Claim Settings ",bca
+156,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimStatus","Claim Status ",bca
+157,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimSubmissionCategory.id","Claim Submission Category ID ",bca
+158,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimSubmissionCategory.name","Claim Submission Category Name ",bca
+159,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.clia.category","CLIA Certification Level ",bca
+160,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.clia.number","CLIA Number ",bca
+161,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.clia.requiredForProcedureCode","CLIA Required on Claim ",bca
+162,"Give Business name for Reference Data.clinicalEncounters.closedBy","Clinical Encounter Closed By ",bca
+163,"Give Business name for Reference Data.clinicalEncounters","Clinical Encounters ",bca
+164,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.miscellaneousFields.ctrNumber","Clinical Trial Registry Number ",bca
+165,"Give Business name for DecisionResponse.scrubbedClaim.claim.SpecialtyFieldGroup.dme.cmnFormIdentifier","CMN Form Identifier ",bca
+166,"Give Business name for Decision Context.DecisionResponse.decisionProcessingElements.commonClaimTypes","Common Claim Types ",bca
+167,"Give Business name for DecisionResponse.scrubbedClaim.claim.completeCharges","Complete Charges ",bca
+168,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.wellChildCare.epsdtCompleteScreen","Complete EPSDT Screen ",bca
+169,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode02","Condition Code 02 ",bca
+170,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode04","Condition Code 04 ",bca
+171,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode05","Condition Code 05 ",bca
+172,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode06","Condition Code 06 ",bca
+173,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode07","Condition Code 07 ",bca
+174,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode08","Condition Code 08 ",bca
+175,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode09","Condition Code 09 ",bca
+176,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode10","Condition Code 10 ",bca
+177,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode11","Condition Code 11 ",bca
+178,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode26","Condition Code 26 ",bca
+179,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode28","Condition Code 28 ",bca
+180,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode29","Condition Code 29 ",bca
+181,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCode77","Condition Code 77 ",bca
+182,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCodeA4","Condition Code A4 ",bca
+183,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCodeA6","Condition Code A6 ",bca
+184,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCodeD7","Condition Code D7 ",bca
+185,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCodeD8","Condition Code D8 ",bca
+186,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.conditionCodeD9","Condition Code D9 ",bca
+187,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.conditionCodes.G0","Condition Code G0 ",bca
+188,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityClaimCodes.conditionCodes","Condition Codes ",bca
+189,"Give Business name for DecisionResponse.scrubbedClaim.claim.corporateBillingSplitFields","Corporate Billing Split By ",bca
+190,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.cptMods","Cpt Mods ",bca
+191,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.creatinineAmount","Creatinine Amount ",bca
+192,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.creatinineDate","Creatinine Date ",bca
+193,"Give Business name for DecisionResponse.refData.crossPracticeCRMT","Cross Practice CRMT Details ",bca
+194,"Give Business name for DecisionResponse.currentDate.consumer","Current Athena Date Time ",bca
+195,"Give Business name for DecisionResponse.scrubbedClaim.claim","Current Claim ",bca
+196,"Give Business name for DecisionResponse.scrubbedClaim.claim.currentIllnessDate","Current Illness Date ",bca
+197,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.customInsuranceGroup.id","Custom Insurance Group ID ",bca
+198,"Give Business name for DecisionResponse.scrubbedClaim.claim.lastSeenDate","Date Last Seen ",bca
+199,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.lastWorkedDate","Date Last Worked ",bca
+200,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.deceasedDate","Deceased Date ",bca
+201,"Give Business name for DecisionResponse","Decision Response ",bca
+202,"Give Business name for DecisionResponse.scrubbedClaim.claim.otherScrubSettings.value","Deckerville Local Rule 9 Flag ",bca
+203,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.miscellaneousFields.delayReasonCode","Delay Reason Code ",bca
+204,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department","Department ",bca
+205,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.address","Department Address ",bca
+206,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.address.street1","Department Address Line 1 ",bca
+207,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.address.street2","Department Address Line 2 ",bca
+208,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.billingName","Department Billing Name ",bca
+209,"Give Business name for DepartmentBKM.Get Department Location(DecisionResponse.refData.departments, Decision Response.scrubbedClaim.claim.medicalGroup.providerGroup.department.id)"","Department Campus Location ",bca
+210,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.chartSharingGroupId","Department Chart Sharing Group ",bca
+211,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.address.city","Department City ",bca
+212,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.address.county","Department County ",bca
+213,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.type.fqhc","Department FQHC Flag ",bca
+214,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.governmentDesignation.id","Department Government Designation ID ",bca
+215,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.departmentGroupId","Department Group ID ",bca
+216,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.id","Department ID ",bca
+217,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.name","Department Name ",bca
+218,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.departmentNumber.npi","Department NPI ",bca
+219,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.departmentNumber.npiVerifiedStatusId","Department NPI Verified Status ",bca
+220,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.departmentNumber","Department Number ",bca
+221,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.phone","Department Phone ",bca
+222,"Give Business name for (DecisionResponse.scrubbedClaim.referenceData.departments).providerGroupId","Department Provider Group ID ",bca
+223,"Give Business name for Reference Data.providerNumbers.providerId","Department Provider ID ",bca
+224,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.specialtyId","Department Specialty ID ",bca
+225,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.address.state","Department State ",bca
+226,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.typeOfBill","Department Type Of Bill ",bca
+227,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.address.zip","Department ZIP Code ",bca
+228,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.rehabilitationDescription","Description Of Rehabilitation Services ",bca
+229,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.enrollmentCategoryName","Destination Override Enrollment Category Name ",bca
+230,"Give Business name for DecisionResponse.scrubbedClaim.claim.diagnosis.codeSetId","Diagnosis Code Set ",bca
+231,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.discharged","Discharged ",bca
+232,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.disfigurementDescription","Disfigurement Description ",bca
+233,"Give Business name for DecisionResponse.scrubbedClaim.claim.SpecialtyFieldGroup.dme","DME ",bca
+234,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.certificationRevisionDate","DME Certification Revision Date ",bca
+235,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.certificationType","DME Certification Type ",bca
+236,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.cmnQuantity","DME CMN Quantity ",bca
+237,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.rcConditionIndicatorCode","DME Condition Indicator Codes ",bca
+238,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.rcConditionIndicatorType","DME Condition Indicator Type ",bca
+239,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.rcConditionsApplyYN","DME Conditions Apply Flag ",bca
+240,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.lastCertificationDate","DME Last Certification Date ",bca
+241,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.therapyBeginDate","DME Therapy Begin Date ",bca
+242,"Give Business name for DecisionResponse.scrubbedClaim.claim.status.droppedToPaper","Dropped to Paper Flag ",bca
+243,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.durationOfTreatement","Duration Of Treatment ",bca
+244,"Give Business name for DecisionResponse.activeInsurance.eligibility.benefits","Eligibility Benefit ",bca
+245,"Give Business name for (DecisionResponse.activeInsurance.eligibility.benefits).benefitInfoCode","Eligibility Benefit Information Code ",bca
+246,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.eligibilityClass","Eligibility Class ",bca
+247,"Give Business name for DecisionResponse.activeInsurance.eligibility.parser.eligibility.covered","Eligibility Covered ",bca
+248,"Give Business name for DecisionResponse.activeInsurance.eligibility.groupId","Eligibility Group ID ",bca
+249,"Give Business name for DecisionResponse.activeInsurance.eligibility.id","Eligibility ID ",bca
+250,"Give Business name for (DecisionResponse.activeInsurance.eligibility.benefits).planCoverageDescription","Eligibility Plan Coverage Description ",bca
+251,"Give Business name for flatten((DecisionResponse.activeInsurance.eligibility.benefits).relatedEntity)","Eligibility Related Entity ",bca
+252,"Give Business name for DecisionResponse.activeInsurance.verificationNote","Eligibility Verification Note ",bca
+253,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.emcCode","EMC Code ",bca
+254,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.emcReceiverId","EMC Receiver ID ",bca
+255,"Give Business name for DecisionResponse.scrubbedClaim.claim.emergencyServicesDefinerCode","Emergency Services Definer Code ",bca
+256,"Give Business name for DecisionResponse.activeInsurance.subscriber.employer.address.phone","Employer Phone ",bca
+257,"Give Business name for DecisionResponse.refData.employers","Employers ",bca
+258,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.encounterCode","Encounter Code ",bca
+259,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.enrollmentCategory.id","Enrollment Category ID ",bca
+260,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.enrollmentCategory.name","Enrollment Category Name ",bca
+261,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus","Enrollment Status Entity ",bca
+262,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.epoetinAmount","Epoetin Starting Dose ",bca
+263,"Give Business name for DecisionResponse.scrubbedClaim.claim.epsdtReferral.given","EPSDT Referral Given ",bca
+264,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.erTransport.ertDropOffLocationName","ER Transport Drop-Off Location Name ",bca
+265,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.erTransport.ertPickupLocationName","ER Transport Pick-Up Location Name ",bca
+266,"Give Business name for (DecisionResponse.scrubState).executedBRID","Executed BR ID ",bca
+267,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.returnToWorkOn","Expected Return to Work Date ",bca
+268,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityClaimCodes","Facility Codes ",bca
+269,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.familyPlan","Familiy Plan ",bca
+270,"Give Business name for Reference Data.procedureCodeModifiers","Fee Affecting Modifier ",bca
+271,"Give Business name for Reference Data.chargeAmounts.revenueCode","Fee Schedule Revenue Code ",bca
+272,"Give Business name for CommonUtilities.Get Referral Auth Number(DecisionResponse.activeInsurance.id, DecisionResponse.scrubbedClaim.referenceData)"","Fetch Authorization number ",bca
+273,"Give Business name for ProviderBKM.Fetch Provider Type Data( DecisionResponse:DecisionResponse, ProviderTypeId: Supervising Provider Type ID )"","Fetch Provider Type ",bca
+274,"Give Business name for DecisionResponse.scrubbedClaim.claim.filingLimitLength","Filing Limit In Days For Claim ",bca
+275,"Give Business name for DecisionResponse.scrubbedClaim.claim.siblingClaimId","Split Claim Number ",bca
+276,"Give Business name for DecisionResponse.scrubbedClaim.claim.diagnosis.primaryCode","First Claim Diagnosis Code ",bca
+277,"Give Business name for DecisionResponse.scrubbedClaim.claim.fqhcCostReportingYN","FQHC Cost Reporting Flag ",bca
+278,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.credentialed.fqhc","FQHC Credentialed ",bca
+279,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.autoFormatting.fqhc","FQHC Encounter Formatting ",bca
+280,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.settings.insuranceGroups.fqhc","FQHC Insurance Group ",bca
+281,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFrequency","Frequency Code ",bca
+282,"Give Business name for PatientOrInsuranceBKM.Get PrePayment Details(    DecisionResponse : DecisionResponse,          PrepaymentID : 61 )"","Get PrePayment Details ",bca
+283,"Give Business name for DecisionResponse.scrubbedClaim.claim.ruleAttributes.gr11021Hold","Global Rule 11021 Flag ",bca
+284,"Give Business name for DecisionResponse.scrubbedClaim.claim.ruleAttributes.gr11811Hold","Global Rule 11811 Flag ",bca
+285,"Give Business name for DecisionResponse.scrubbedClaim.claim.ruleAttributes.gr13051Hold","Global Rule 13051 Flag ",bca
+286,"Give Business name for DecisionResponse.scrubbedClaim.claim.ruleAttributes.gr4681Hold","Global Rule 4681 Flag ",bca
+287,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.governmentFundedTypeId","Government Funded Type ID ",bca
+288,"Give Business name for PatientOrInsuranceBKM.Fetch Government Funded Type Name( GovernmentFundedTypeId:DecisionResponse.activeInsurance.insurancePackage.governmentFundedTypeId, ReferenceData:DecisionResponse.scrubbedClaim.referenceData )"","Government Funded Type Name ",bca
+289,"Give Business name for DecisionResponse.scrubbedClaim.claim.groupBillingYN","Group Billing ",bca
+290,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address","Guarantor Address Entity ",bca
+291,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address.street1","Guarantor Address Line 1 ",bca
+292,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address.city","Guarantor City ",bca
+293,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address.country","Guarantor Country ",bca
+294,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.birthDate","Guarantor Date Of Birth ",bca
+295,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.firstName","Guarantor First Name ",bca
+296,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.lastName","Guarantor Last Name ",bca
+297,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.guarantor.nameSuffix","Guarantor Name Suffix With Special Characters ",bca
+298,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address.state","Guarantor State ",bca
+299,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address.zip","Guarantor ZIP Code ",bca
+300,"Give Business name for DecisionResponse.healthCareClaimType","Healthcare ClaimType ",bca
+301,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.hematocritAmount","Hematocrit Level ",bca
+302,"Give Business name for DecisionResponse.scrubbedClaim.claim.hemoglobinAmount","Hemoglobin Level ",bca
+303,"Give Business name for DecisionResponse.scrubbedClaim.claim.historicalNotes","Historical Notes ",bca
+304,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.historicalClaims","History Claims ",bca
+305,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.holidayYN","Holiday Flag ",bca
+306,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hospice.hospiceOrHomeHealthAgencyID","Hospice-Home Health Agency ID ",bca
+307,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.hospitalClaim","Hospital Claim Flag ",bca
+308,"Give Business name for Reference Data.departments","Hospital Department Flag ",bca
+309,"Give Business name for DecisionResponse.refData.patientRoundingDetails.admitDate","Hospital Rounding List Admission Date ",bca
+310,"Give Business name for ClaimBKM.Fetch Patient Rounding Details( DecisionResponse: DecisionResponse, Filter By:{<conditions>})"","Hospital Rounding List ID ",bca
+311,"Give Business name for DecisionResponse.scrubbedClaim.claim.hospitalization","Hospitalization Dates ",bca
+312,"Give Business name for DecisionResponse.scrubbedClaim.claim.hospitalization.fromDate","Hospitalization From Date ",bca
+313,"Give Business name for DecisionResponse.scrubbedClaim.claim.hospitalization.toDate","Hospitalization To Date ",bca
+314,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.howAccidentOccurred","How Accident Occured ",bca
+315,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.ilForm.providerRoleCode","IL Medicaid DPA 1443 Provider Role ",bca
+316,"Give Business name for DecisionResponse.scrubbedClaim.claim.sterilization","IL Medicaid DPA 2360 Sterilization Abortion ",bca
+317,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.immunization.batchNumber","Immunization Batch Number ",bca
+318,"Give Business name for DecisionResponse.scrubbedClaim.claim.caserate.local7CaserateCodes","In Vitro Sciences Local Rule 7 Case Rate Codes ",bca
+319,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.individualBilling","Individual Billing ",bca
+320,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.infoRequested","Info Requested ",bca
+321,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.spinalManipulation.initialTreatmentDate","Initial Treatment Date ",bca
+322,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.injuredAt","Injured At Address ",bca
+323,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.injuryCircumstance","Injury Circumstance ",bca
+324,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.injuryCity","Injury City ",bca
+325,"Give Business name for DecisionResponse.activeInsurance.injuryDate","Injury Date ",bca
+326,"Give Business name for DecisionResponse.activeInsurance.cancelledDate","Insurance Cancelled Flag ",bca
+327,"Give Business name for DecisionResponse.activeInsurance.eligible","Insurance Eligible Flag ",bca
+328,"Give Business name for DecisionResponse.activeInsurance.expirationDate","Insurance Expiration Date ",bca
+329,"Give Business name for DecisionResponse.activeInsurance.expirationDateLastUpdatedBy","Insurance Expiration Date Last Updated by ",bca
+330,"Give Business name for DecisionResponse.activeInsurance.groupId","Insurance Group ID ",bca
+331,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.insurance.id","Insurance ID Associated with Authorization ",bca
+332,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.payerAddress.street1","Insurance Package Address Line 1 ",bca
+333,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.payerAddress.street2","Insurance Package Address Line 2 ",bca
+334,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.payerAddress.city","Insurance Package City ",bca
+335,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.countryId","Insurance Package Country ID ",bca
+336,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.expirationDate","Insurance Package Expiration Date ",bca
+337,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.fullName","Insurance Package Full Name ",bca
+338,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.groupNumber","Insurance Package Medical Group Number ",bca
+339,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.nameUnstripped","Insurance Package Name With Special Characters ",bca
+340,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.pending","Insurance Package Pending ",bca
+341,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.payerAddress.state","Insurance Package State ",bca
+342,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.payerAddress.zip","Insurance Package ZIP Code ",bca
+343,"Give Business name for Reference Data.insuranceProductTypes","Insurance Product Type ",bca
+344,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.packagePrograms.programId","Insurance Program ID ",bca
+345,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.insuranceReportingCategory.id","Insurance Reporting Category ID ",bca
+346,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.insuranceReportingCategory.name","Insurance Reporting Category Name ",bca
+347,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.insuranceTypeId","Insurance Type ID ",bca
+348,"Give Business name for Reference Data.interfaceVendors","Interface Vendor ",bca
+349,"Give Business name for flatten([DecisionResponse.scrubbedClaim.referenceData.interfaceVendors.name])","Interface Vendor Name ",bca
+350,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.invalidMemberIdFormat","Invalid ID Number Format ",bca
+351,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.invalidMemberIdFormatExample","Invalid Member ID Format Example ",bca
+352,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.miscellaneousFields.ideNumber","Investigational Device Exemption Number ",bca
+353,"Give Business name for DecisionResponse.scrubbedClaim.claim.invoiceId","Invoice ID ",bca
+354,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.invoiceNoteYN","Invoice Note For Insurance Package Flag ",bca
+355,"Give Business name for DecisionResponse.activeInsurance.memberIdValidationResult","Is Member ID Invalid ",bca
+356,"Give Business name for DecisionResponse.activeInsurance.memberId = DecisionResponse.activeInsurance.groupId","Is Member ID same as Insurance Group ID ",bca
+357,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.regularWorkYN","Is patient able To perform regular work? ",bca
+358,"Give Business name for DecisionResponse.activeInsurance.memberId = DecisionResponse.scrubbedClaim.claim.patient.ssn","Is the Patient Member ID same as the Patient SSN ",bca
+359,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.hctHgbDate","Last HCT-Hgb Test Date ",bca
+360,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.maternity.lastMenstrualPeriodDate","Last Menstrual Period Date ",bca
+361,"Give Business name for flatten(flatten(Supervising Provider Number Exists Check).Provider Number)[1]","Legacy Num ",bca
+362,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.legacyNumber","Legacy Number ",bca
+363,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.rules2EnabledBizReq","ListOfEnabledBizRules ",bca
+364,"Give Business name for DecisionResponse.scrubState.overrideBizReqIds","ListOfOverrideBizReqIdAndCrossModelOverrides ",bca
+365,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.customInsuranceGroup.name","Local Reporting Category Name ",bca
+366,"Give Business name for DecisionResponse.scrubbedClaim.claim.initialElectronicSubmission","Mandated Electronic Claim Submission Flag ",bca
+367,"Give Business name for DateBKM.Add Business Days(     decisionResponse: DecisionResponse,    inputDate: Claim Created Date,    daysToBeAdded: 10    )"","Max Hold Date ",bca
+368,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.address","Medical Group Address ",bca
+369,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.address.street2","Medical Group Address Line 2 ",bca
+370,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.billableOverride","Medical Group Billable ",bca
+371,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.billingName","Medical Group Billing Name ",bca
+372,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.address.city","Medical Group City ",bca
+373,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.credentialingId","Medical Group Credentialing ID ",bca
+374,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.credentialingStatusId","Medical Group Credentialing Status ID ",bca
+375,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.enrollmentParameter","Medical Group DME Enrollment Flag ",bca
+376,"Give Business name for DecisionResponse.refData.medicalGroupEnrollmentStatuses","Medical Group Enrollment Statuses ",bca
+377,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.entityType","Medical Group Entity Type ID ",bca
+378,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.id","Medical Group ID ",bca
+379,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.legacyNumber","Medical Group Legacy Number ",bca
+380,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.name","Medical Group Name ",bca
+381,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.groupNumber.npi","Medical Group NPI ",bca
+382,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).insurancePackage.medicalGroup.enrollmentStatus.payerNpiNumber","Medical Group NPI from Primary Payer Enrollment ",bca
+383,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.npiOnFilesStatusId","Medical Group NPI On File ",bca
+384,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.groupNumber.npiVerifiedStatusId","Medical Group NPI Verified Status ",bca
+385,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.groupNumber.number","Medical Group Number ",bca
+386,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.ownedByHospitalYN","Medical Group Owned By Hospital Flag ",bca
+387,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.id","Medical Group Payer Enrollment ID ",bca
+388,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.address.phone","Medical Group Phone ",bca
+389,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.address.state","Medical Group State ",bca
+390,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.statementReturnInfo.address.street1","Medical Group Statement Return Address 1 ",bca
+391,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.statementReturnInfo.address.street2","Medical Group Statement Return Address 2 ",bca
+392,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.statementReturnInfo.name","Medical Group Statement Return Address Name ",bca
+393,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.statementReturnInfo.address.city","Medical Group Statement Return City ",bca
+394,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.statementReturnInfo.address.state","Medical Group Statement Return State ",bca
+395,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.statementReturnInfo.address.zip","Medical Group Statement Return Zip ",bca
+396,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.groupNumber.ansiSpecialtyId","Medical Group Taxonomy From Payer Enrollment ",bca
+397,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).insurancePackage.medicalGroup.enrollmentStatus.ansiSpecialtyId","Medical Group Taxonomy from Primary Payer Enrollment ",bca
+398,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.address.zip","Medical Group ZIP Code ",bca
+399,"Give Business name for DecisionResponse.refData.changeMedicalGroups","Medical Groups ",bca
+400,"Give Business name for ProviderBKM.Medical EnrollmentStatus Legacy Number(DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.enrollmentCategoryId, Decision Response)"","Medicalgroup Enrollment Status Legacy Number ",bca
+401,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).insurancePackage.mspInsuranceTypeId","Medicare Primary Payer Insurance Type ID ",bca
+402,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.settings.medicareReplacement","Medicare Replacement Flag ",bca
+403,"Give Business name for (Secondary Payer).insurancePackage.mspInsuranceTypeCode","Medicare Secondary Payer Insurance Type ID ",bca
+404,"Give Business name for DecisionResponse.activeInsurance.memberId","Member ID ",bca
+405,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.memberIdFormatExample","Member ID Format Example ",bca
+406,"Give Business name for DateBKM.Add Business Days(     decisionResponse: DecisionResponse,    inputDate: Claim Created Date,    daysToBeAdded: 5    )"","Min Hold Date ",bca
+407,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.miscellaneousFields","Miscellaneous Entity ",bca
+408,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.natureOfBusiness","Nature Of Business ",bca
+409,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.needForReferral","Need For Referral Or Consultation ",bca
+410,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.needForSurgery","Need For Surgery Or Hospitalization ",bca
+411,"Give Business name for DecisionResponse.networkId","Network ID ",bca
+412,"Give Business name for DecisionResponse.scrubbedClaim.crossModel.newNPIStatusID","New NPI Status ID ",bca
+413,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.patientWorking","New York Workers Comp C-4 Is Patient Working ",bca
+414,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.permanentRestriction","New York Workers Comp C-4 Permanent Restriction ",bca
+415,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.reachedMaxImprovement","New York Workers Comp C-4 Reached Maximum Improvement ",bca
+416,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.typeOfReport","New York Workers Comp C-4 Type Of Report ",bca
+417,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.wasWorkInjuryCause","New York Workers Comp C-4 Was Work Injury Cause ",bca
+418,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.providerNonParYN","Non Participating Provider ",bca
+419,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.notSolelyRelatedToAutoAccident","Not Solely Related to Auto Accident ",bca
+420,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.validEnrollmentStatuses.npi","NPI Of Valid Enrollment Status ",bca
+421,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimSubmissionCategory.npiStatusId","NPI Status ID ",bca
+422,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.mcaidHcfa22G","NYMcaidHCFA 22G ",bca
+423,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.adjustmentyn","NYMcaidHCFA Adjustment Flag ",bca
+424,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.emergencyRelatedYN","NYMcaidHCFA Emergency Related Flag ",bca
+425,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.abortionCode","NYMcaidHCFA Paper Sterilization-Abortion Code ",bca
+426,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.xrayLabResults","Objective Findings XRay And Laboratory Results ",bca
+427,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode01","Occurrence Code 01 ",bca
+428,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode02","Occurrence Code 02 ",bca
+429,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode03","Occurrence Code 03 ",bca
+430,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode04","Occurrence Code 04 ",bca
+431,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode05","Occurrence Code 05 ",bca
+432,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode10","Occurrence Code 10 ",bca
+433,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode18","Occurrence Code 18 ",bca
+434,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode19","Occurrence Code 19 ",bca
+435,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode21","Occurrence Code 21 ",bca
+436,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode24","Occurrence Code 24 ",bca
+437,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCode25","Occurrence Code 25 ",bca
+438,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeA1","Occurrence Code A1 ",bca
+439,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeA2","Occurrence Code A2 ",bca
+440,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeA3","Occurrence Code A3 ",bca
+441,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeB1","Occurrence Code B1 ",bca
+442,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeB2","Occurrence Code B2 ",bca
+443,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeB3","Occurrence Code B3 ",bca
+444,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeC1","Occurrence Code C1 ",bca
+445,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeC2","Occurrence Code C2 ",bca
+446,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.occurrenceCodes.occurrenceCodeC3","Occurrence Code C3 ",bca
+447,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityClaimCodes.occurrenceCodes","Occurrence Codes ",bca
+448,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.operatingProvider","Operating Provider ",bca
+449,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.operatingProvider.address","Operating Provider Address ",bca
+450,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.operatingProvider.entityType.id","Operating Provider Entity ID ",bca
+451,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.operatingProvider.entityType","Operating Provider Entity Type ",bca
+452,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.operatingProvider.id","Operating Provider ID ",bca
+453,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.operatingProvider.lastName","Operating Provider Last Name ",bca
+454,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.operatingProviderNumber.npi","Operating Provider NPI ",bca
+455,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.operatingProviderNumber","Operating Provider Number ",bca
+456,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.oppsAddendumbs","Opps Adden Dumbs ",bca
+457,"Give Business name for DecisionResponse.refData.oppsAddendumes","Opps Addendumes ",bca
+458,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider","Ordering Provider ",bca
+459,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.address","Ordering Provider Address ",bca
+460,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.entityType","Ordering Provider Entity Type ",bca
+461,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.entityType.id","Ordering Provider Entity Type ID ",bca
+462,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.firstName","Ordering Provider First Name ",bca
+463,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.id","Ordering Provider ID ",bca
+464,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.lastName","Ordering Provider Last Name ",bca
+465,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.middleInitial","Ordering Provider Middle Initial ",bca
+466,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.nameSuffix","Ordering Provider Name Suffix ",bca
+467,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.orderingProviderNumber.referringProviderNumber.npi","Ordering Provider NPI ",bca
+468,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.orderingProviderNumber.referringProviderNumber.number","Ordering Provider Number ",bca
+469,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.type","Ordering Provider Type ",bca
+470,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.orderingProvider.type.id","Ordering Provider Type ID ",bca
+471,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.originalId","Original Department ID ",bca
+472,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.otherReason","Other ",bca
+473,"Give Business name for DecisionResponse.scrubbedClaim.refData.procedureCodeParentChild","Other athenaCodesource Parent Procedure Code ",bca
+474,"Give Business name for DecisionResponse.scrubbedClaim.claim.otherDiagnoses","Other Claim Diagnosis Codes ",bca
+475,"Give Business name for DecisionResponse.scrubbedClaim.crossModel.otherClaimEditFieldDetails","Other Claim Edit Fields Details ",bca
+476,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.insurance.insurancePackage.claimRuleCategoryId","Other Claim Rule Category ID ",bca
+477,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.otherInsuranceEraRecordExistsYN","Other Insurance ERA Source ID ",bca
+478,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.insurance.insurancePackage.id","Other Insurance Package ID ",bca
+479,"Give Business name for flatten((Reference Data).placeOfService).id","Other Place Of Service ID ",bca
+480,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.insurance.insurancePackage.productTypeId","Other Product Type ID ",bca
+481,"Give Business name for Fetch Provider NPI.Execute","Other Provider Number ",bca
+482,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.otherRelationship","Other Relationship ",bca
+483,"Give Business name for DecisionResponse.scrubbedClaim.claim.override24Hour","Override 24-Hour Rules Flag ",bca
+484,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.routingEntityId","Override Routing Department Entity ID ",bca
+485,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2CertificationRevisionDate","Oxygen Certification Revision Date ",bca
+486,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2CmnQuantity","Oxygen CMN Quantity ",bca
+487,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2TherapyBeginDate","Oxygen Therapy Begin Date ",bca
+488,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2CertificationType","Oxygen Therapy Certification Type ",bca
+489,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.packagePrograms","Package Programs ",bca
+490,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient","Patient ",bca
+491,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address","Patient Address ",bca
+492,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.street1","Patient Address Line 1 ",bca
+493,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.street2","Patient Address Line 2 ",bca
+494,"Give Business name for FEELBKM.Patient Age in Days(DecisionResponse.scrubbedClaim.claim.patient.birthDate,Decision Response.scrubbedClaim.claim.serviceDate)"","Patient Age In Days ",bca
+495,"Give Business name for round down(DateBKM.Fetch Difference in Months(Claim Date Of Service , Patient Date Of Birth))"","Patient Age In Months ",bca
+496,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.city","Patient City ",bca
+497,"Give Business name for DecisionResponse.scrubbedClaim.claim.patientClaimOutstandingAmount","Patient Claim Outstanding Amount ",bca
+498,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.country","Patient Country ",bca
+499,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.countryCode","Patient Country Code ",bca
+500,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.countryId","Patient Country ID ",bca
+501,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.county","Patient County ",bca
+502,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.birthDate","Patient Date Of Birth ",bca
+503,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.employer.name","Patient Employer Name ",bca
+504,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.enterpriseId","Patient Enterprise ID ",bca
+505,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.firstName","Patient First Name ",bca
+506,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.firstName","Patient First Name With Special Characters ",bca
+507,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.homePhone","Patient Home Phone ",bca
+508,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.homeless","Patient Homeless Flag ",bca
+509,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.id","Patient ID ",bca
+510,"Give Business name for distinct values(flatten(flatten(DecisionResponse.refData.patientVisitDetails).patientId))","Patient IDs ",bca
+511,"Give Business name for DecisionResponse.activeInsurance.issueDate","Patient Insurance Issue Date ",bca
+512,"Give Business name for DecisionResponse.activeInsurance.insurancePackage","Patient Insurance Package ",bca
+513,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.lastName","Patient Last Name ",bca
+514,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.maritalStatusId","Patient Marital Status ",bca
+515,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.mobilePhone","Patient Mobile Phone ",bca
+516,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.occupation","Patient Occupation ",bca
+517,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.raceInfo","Patient Race Hierarchy Group ",bca
+518,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.recordNumbers.selectId","Patient Registration Custom Field Drop Down Value ",bca
+519,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.recordNumbers.categoryId","Patient Registration Custom Field ID ",bca
+520,"Give Business name for flatten([DecisionResponse.scrubbedClaim.claim.patient.recordNumbers.categoryName])","Patient Registration Custom Field Name ",bca
+521,"Give Business name for DecisionResponse.activeInsurance.relationShipToInsured.ansiCode","Patient Relationship To Insured Code ",bca
+522,"Give Business name for DecisionResponse.activeInsurance.relationShipToInsured.id","Patient Relationship To Insured ID ",bca
+523,"Give Business name for DecisionResponse.activeInsurance.relationShipToInsured.name","Patient Relationship To Insured Name ",bca
+524,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.sex","Patient Sex ",bca
+525,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.ssn","Patient SSN ",bca
+526,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.state","Patient State ",bca
+527,"Give Business name for DecisionResponse.scrubbedClaim.claim.patientStatusCode","Patient Status Code ",bca
+528,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.stillUnderCareYN","Patient Still Under Care ",bca
+529,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.toUnableToWorkDate","Patient Unable To Work End Date ",bca
+530,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.fromUnableToWorkDate","Patient Unable To Work Start Date ",bca
+531,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.patientVisitDetails","Patient Visit Details ",bca
+532,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.patientWeight","Patient Weight ",bca
+533,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.workPhone","Patient Work Phone ",bca
+534,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.address.zip","Patient ZIP Code ",bca
+535,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.payToAddressId","Pay_To Address ID From Payer Enrollment ",bca
+536,"Give Business name for Reference Data.payToAddresses","Pay_To Addresses ",bca
+537,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.payToAddressId","Pay-To ID ",bca
+538,"Give Business name for DecisionResponse.activeInsurance.payers","Payer ",bca
+539,"Give Business name for DecisionResponse.activeInsurance.payerLabels","Payer Label ",bca
+540,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.payorExistYN","Payor Exist YN ",bca
+541,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.credentialed.pbc","PBC Credentialed ",bca
+542,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.settings.insuranceGroups.pbc","PBC Insurance Group ",bca
+543,"Give Business name for DecisionResponse.activeInsurance.primaryCareProviderId","PCP Provider ID ",bca
+544,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.periodicReport","Periodic Report ",bca
+545,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.physicalAddress","Physical Address ",bca
+546,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.physicalAddress.city","Physical Address City ",bca
+547,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.physicalAddress.street1","Physical Address Line 1 ",bca
+548,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.physicalAddress.street2","Physical Address Line 2 ",bca
+549,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.physicalAddress.state","Physical Address State ",bca
+550,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.physicalAddress.zip","Physical Address ZIP Code ",bca
+551,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.placeOfService.id","Place Of Service ID ",bca
+552,"Give Business name for flatten(Place Of Services.id)","Place of Service IDs ",bca
+553,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.placeOfService.name","Place Of Service Name ",bca
+554,"Give Business name for DecisionResponse.scrubbedClaim.claim.diagnosis.details.presentOnAdmissionIndicator","POA Indicator ",bca
+555,"Give Business name for DecisionResponse.refData.poaExemptCodes","PoaExemptCodes ",bca
+556,"Give Business name for DecisionResponse.activeInsurance.subscriber","Policy Holder ",bca
+557,"Give Business name for DecisionResponse.activeInsurance.subscriber.address.street1","Policy Holder Address Line 1 ",bca
+558,"Give Business name for DecisionResponse.activeInsurance.subscriber.address.city","Policy Holder City ",bca
+559,"Give Business name for DecisionResponse.activeInsurance.subscriber.birthDate","Policy Holder Date Of Birth ",bca
+560,"Give Business name for DecisionResponse.activeInsurance.subscriber.employer.address.street1","Policy Holder Employer Address Line 1 ",bca
+561,"Give Business name for DecisionResponse.activeInsurance.subscriber.employer.address.city","Policy Holder Employer City ",bca
+562,"Give Business name for ClaimBKM.Get Employer Details( DecisionResponse : DecisionResponse, FilterBy :{ Patient Insurance ID : Insurance Plan ID, Employer ID :2381 } )"","Policy Holder Employer Details ",bca
+563,"Give Business name for DecisionResponse.activeInsurance.subscriber.employer.name","Policy Holder Employer Name ",bca
+564,"Give Business name for DecisionResponse.activeInsurance.subscriber.employer.address.state","Policy Holder Employer State ",bca
+565,"Give Business name for DecisionResponse.activeInsurance.subscriber.employer.address.zip","Policy Holder Employer ZIP Code ",bca
+566,"Give Business name for DecisionResponse.activeInsurance.subscriber.entityType.id","Policy Holder Entity Type ID ",bca
+567,"Give Business name for DecisionResponse.activeInsurance.subscriber.firstName","Policy Holder First Name ",bca
+568,"Give Business name for DecisionResponse.activeInsurance.subscriber.lastName","Policy Holder Last Name ",bca
+569,"Give Business name for DecisionResponse.activeInsurance.subscriber.middleInitial","Policy Holder Middle Initial ",bca
+570,"Give Business name for DecisionResponse.activeInsurance.subscriber.nameSuffix","Policy Holder Name Suffix ",bca
+571,"Give Business name for DecisionResponse.activeInsurance.subscriber.sex","Policy Holder Sex ",bca
+572,"Give Business name for DecisionResponse.activeInsurance.subscriber.ssn","Policy Holder SSN ",bca
+573,"Give Business name for DecisionResponse.activeInsurance.subscriber.address.state","Policy Holder State ",bca
+574,"Give Business name for DecisionResponse.activeInsurance.subscriber.address.zip","Policy Holder ZIP Code ",bca
+575,"Give Business name for DecisionResponse.activeInsurance.eligibility.demographicsDiffFields","Practice Demographics Eligibility Check ",bca
+576,"Give Business name for DecisionResponse.practiceHierarchy","Practice Hierarchy ",bca
+577,"Give Business name for DecisionResponse.practiceId","Practice ID ",bca
+578,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.practiceSettings","Practice Settings ",bca
+579,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.maternity.pregnant","Pregnant ",bca
+580,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.prepayment","Prepayment Plan ",bca
+581,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hearingVision.prescriptionDate","Prescription Date ",bca
+582,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hearingVision.prescriptionDateInvalidFlag","Prescription Date Invalid Flag ",bca
+583,"Give Business name for (Primary Payer).acceptsAssignment","Primary Accepts Assignment ",bca
+584,"Give Business name for (Primary Payer).insurancePackage.adjudicationProgramId","Primary Adjudication Program ID ",bca
+585,"Give Business name for Reference Data.patientInsurances.referringProvider.providerNumbers.providerNumberCategory.id","Primary Care Provider Number Category ID ",bca
+586,"Give Business name for (Primary Payer).insurancePackage.casePolicyId","Primary Case Policy Type ID ",bca
+587,"Give Business name for (Primary Payer).insurancePackage.claimFilingIndicator.ansiCode","Primary Claim Filing Indicator ID ",bca
+588,"Give Business name for (Primary Payer).insurancePackage.claimFilingIndicator.id","Primary Claim Filling Indicator ID ",bca
+589,"Give Business name for DecisionResponse.scrubbedClaim.claim.primaryOutstandingAmount","Primary Claim Outstanding Amount ",bca
+590,"Give Business name for (Primary Payer).insurancePackage.claimRuleCategory.id","Primary Claim Rule Category ID ",bca
+591,"Give Business name for (Primary Payer).insurancePackage.claimSubmissionCategory.id","Primary Claim Submission Category ID ",bca
+592,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).insurancePackage.emcCode","Primary EMC Code ",bca
+593,"Give Business name for (Primary Payer).insurancePackage.enrollmentCategory.id","Primary Enrollment Category ID ",bca
+594,"Give Business name for (Primary Payer).insurancePackage.settings.insuranceGroups.fqhc","Primary FQHC Insurance Group ",bca
+595,"Give Business name for (Primary Payer).insurancePackage.governmentFundedTypeId","Primary Government Funded Type ID ",bca
+596,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).caseNumber","Primary Insurance Case Number ",bca
+597,"Give Business name for (Primary Payer).insurancePackage.crossOverCode","Primary Insurance Crossover Code ",bca
+598,"Give Business name for (Primary Payer).eraRecordSourceId","Primary Insurance ERA Source ID ",bca
+599,"Give Business name for (Primary Payer).groupId","Primary Insurance Group ID ",bca
+600,"Give Business name for (Primary Payer).issueDate","Primary Insurance Issue Date ",bca
+601,"Give Business name for (Primary Payer).insurancePackage","Primary Insurance Package ",bca
+602,"Give Business name for (Primary Payer).insurancePackage.fullName","Primary Insurance Package Full Name ",bca
+603,"Give Business name for (Primary Payer).insurancePackage.id","Primary Insurance Package ID ",bca
+604,"Give Business name for (Primary Payer).insurancePackage.name","Primary Insurance Package Name ",bca
+605,"Give Business name for (Primary Payer).id","Primary Insurance Plan ID ",bca
+606,"Give Business name for (Primary Payer).insurancePackage.insuranceReportingCategory.id","Primary Insurance Reporting Category ID ",bca
+607,"Give Business name for (Primary Payer).insurancePackage.insuranceReportingCategory.name","Primary Insurance Reporting Category Name ",bca
+608,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).insurancePackage.insuranceTypeId","Primary Insurance Type ID ",bca
+609,"Give Business name for (Primary Payer).insurancePackage.medicalGroup.groupNumber.legacyNumber","Primary Medical Group Legacy Number ",bca
+610,"Give Business name for (Primary Payer).insurancePackage.medicalGroup.groupNumber.npi","Primary Medical Group NPI ",bca
+611,"Give Business name for (Primary Payer).insurancePackage.medicalGroup.groupNumber","Primary Medical Group Number ",bca
+612,"Give Business name for (Primary Payer).insurancePackage.settings.medicareReplacement","Primary Medicare Replacement Flag ",bca
+613,"Give Business name for DecisionResponse.scrubbedClaim.claim.externalDropApprovalFlag1","Primary Medlytix Deductible Response Flag ",bca
+614,"Give Business name for (Primary Payer).memberId","Primary Member ID ",bca
+615,"Give Business name for (Primary Payer).insurancePackage.claimSubmissionCategory","Primary NPI Status ID ",bca
+616,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.insurances[1]","Primary Patient Insurance ",bca
+617,"Give Business name for ((PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse)).relationShipToInsured.hcfaCode","Primary Patient Relationship To Insured HCFA Code ",bca
+618,"Give Business name for (Primary Payer).relationShipToInsured.id","Primary Patient Relationship To Insured ID ",bca
+619,"Give Business name for PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse","Primary Payer ",bca
+620,"Give Business name for (Primary Payer).insurancePackage.settings.insuranceGroups.pbc","Primary PBC Insurance Group ",bca
+621,"Give Business name for (Primary Payer).subscriber","Primary Policy Holder ",bca
+622,"Give Business name for (Primary Payer).subscriber.address.street1","Primary Policy Holder Address Line1 ",bca
+623,"Give Business name for (Primary Payer).subscriber.address.city","Primary Policy Holder City ",bca
+624,"Give Business name for (Primary Payer).subscriber.address.countryId","Primary Policy Holder Country ID ",bca
+625,"Give Business name for (Primary Payer).subscriber.birthDate","Primary Policy Holder Date Of Birth ",bca
+626,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.insurances[1].subscriber.employer","Primary Policy Holder Employer ",bca
+627,"Give Business name for (Primary Payer).subscriber.employer.name","Primary Policy Holder Employer Name ",bca
+628,"Give Business name for (Primary Payer).subscriber.employer.address.state","Primary Policy Holder Employer State ",bca
+629,"Give Business name for (Primary Payer).subscriber.entityType.id","Primary Policy Holder Entity Type ID ",bca
+630,"Give Business name for (Primary Payer).subscriber.firstName","Primary Policy Holder First Name ",bca
+631,"Give Business name for (Primary Payer).subscriber.lastName","Primary Policy Holder Last Name ",bca
+632,"Give Business name for (Primary Payer).subscriber.middleInitial","Primary Policy Holder Middle Initial ",bca
+633,"Give Business name for (Primary Payer).subscriber.entityType.displayName","Primary Policy Holder Name ",bca
+634,"Give Business name for (Primary Payer).subscriber.homePhone","Primary Policy Holder Phone ",bca
+635,"Give Business name for (Primary Payer).subscriber.sex","Primary Policy Holder Sex ",bca
+636,"Give Business name for (Primary Payer).subscriber.address.state","Primary Policy Holder State ",bca
+637,"Give Business name for (Primary Payer).subscriber.address.zip","Primary Policy Holder ZIP Code ",bca
+638,"Give Business name for (Primary Payer).insurancePackage.productTypeId","Primary Product Type ID ",bca
+639,"Give Business name for (Primary Payer).insurancePackage.renderingProviderNumber.npi","Primary Rendering Provider NPI ",bca
+640,"Give Business name for (Primary Payer).insurancePackage.renderingProviderNumber","Primary Rendering Provider Number ",bca
+641,"Give Business name for (Primary Payer).insurancePackage.renderingProviderNumber.legacyNumber","Primary Rendering Provider Number Legacy Number ",bca
+642,"Give Business name for (Primary Payer).insurancePackage.routingProgram.id","Primary Routing Program ID ",bca
+643,"Give Business name for SelfPay.Execute(PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse)","Primary Self-Pay Flag ",bca
+644,"Give Business name for (Primary Payer).insurancePackage.supervisingProviderNumber.legacyNumber","Primary Supervising Provider Legacy Number ",bca
+645,"Give Business name for (Primary Payer).insurancePackage.supervisingProviderNumber.npi","Primary Supervising Provider NPI ",bca
+646,"Give Business name for (Primary Payer).insurancePackage.supervisingProviderNumber.providerNumber","Primary Supervising Provider Number ",bca
+647,"Give Business name for (Primary Payer).insurancePackage.supervisingProviderNumber","Primary Supervising Provider Numbers ",bca
+648,"Give Business name for (Primary Payer).workersCompensation.state","Primary Workers Comp State ",bca
+649,"Give Business name for DecisionResponse.scrubbedClaim.claim.principalDiagnosis","Principal Diagnosis Code ",bca
+650,"Give Business name for DecisionResponse.scrubbedClaim.claim.principalProcedureDate","Principal Procedure Date ",bca
+651,"Give Business name for DecisionResponse.scrubbedClaim.claim.principalProcedureCode","Principal Procedure ICD-10 Code ",bca
+652,"Give Business name for DecisionResponse.activeInsurance.printZeroDollarCharges","Print Zero Dollar Charges ",bca
+653,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.productTypeId","Product Type ID ",bca
+654,"Give Business name for DecisionResponse.scrubbedClaim.crossModel.providerDetails","Provider Details ",bca
+655,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.historicalClaims.department.providerGroupId","Provider Group ID ",bca
+656,"Give Business name for Reference Data.providers.id","Provider Id ",bca
+657,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hospice.providerHospiceEmployee","Provider Is A Hospice Employee ",bca
+658,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderEnrollmentStatus.legacyNumber","Provider Legacy Number ",bca
+659,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.providerNumberCategory.id","Provider Number Category ID ",bca
+660,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.providerNumberCategory.name","Provider Number Category Name ",bca
+661,"Give Business name for AdjudicationAndProviderQualifier.Execute( Adjudication Program: Adjudication Program ID )","Provider Number Qualifier ",bca
+662,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.providerNumbers","Provider Numbers ",bca
+663,"Give Business name for Reference Data.providerRecordNumbers","Provider Record Numbers ",bca
+664,"Give Business name for Reference Data.providerTypes","Provider Types ",bca
+665,"Give Business name for Reference Data.providers.userName","Provider User Name ",bca
+666,"Give Business name for DecisionResponse.claim.medicalGroup.providerGroup.providers","Providers ",bca
+667,"Give Business name for DecisionResponse.scrubbedClaim.crossModel.typeOfQualifyingProcedureCodes","Qualifying Procedure Codes ",bca
+668,"Give Business name for Reference Data.patientInsurances.sequenceNumber","Quickview Insurance Sequence ",bca
+669,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.department.id","Quickview Primary Department ID ",bca
+670,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.department.name","Quickview Primary Department Name ",bca
+671,"Give Business name for DecisionResponse.activeInsurance.recentEligibility","Recent Eligibility ",bca
+672,"Give Business name for DecisionResponse.activeInsurance.recentEligibility.parser.eligibility.covered","Recent Eligibility Covered ",bca
+673,"Give Business name for DecisionResponse.activeInsurance.recentEligibility.id","Recent Eligibility ID ",bca
+674,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.recordNumbers","Record Numbers ",bca
+675,"Give Business name for DecisionResponse.refData.ansiSpecialties","Ref ANSI Specialties ",bca
+676,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.appointmentDetails","Ref Appointment Details ",bca
+677,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.appointmentRecordNumber","Ref Appointment Record Number ",bca
+678,"Give Business name for flatten([DecisionResponse.scrubbedClaim.referenceData.relationshipToInsured.id])","Ref Data Patient Relationship To Insured ID ",bca
+679,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.patientInsurances","Ref Patient Insurances ",bca
+680,"Give Business name for DecisionResponse.refData.placeOfService","Ref Place Of Service ",bca
+681,"Give Business name for Reference Data.referringProviders","Ref Referring Providers ",bca
+682,"Give Business name for DecisionResponse.refData.ttransactions","Ref Ttransactions ",bca
+683,"Give Business name for DecisionResponse.refData.providerNumbers","RefData Provider Numbers ",bca
+684,"Give Business name for DecisionResponse.scrubbedClaim.referenceData","Reference Data ",bca
+685,"Give Business name for Reference Data.referringProviders[item.id = Referring Provider ID].referringProviderGroupID","Reference Data Referring Provider Group ID ",bca
+686,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.address.street1","Reference Lab Address Line 1 ",bca
+687,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.address.street2","Reference Lab Address Line 2 ",bca
+688,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.address.city","Reference Lab City ",bca
+689,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.entityTypeId","Reference Lab Entity Type ",bca
+690,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.firstName","Reference Lab First Name ",bca
+691,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.id","Reference Lab ID ",bca
+692,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.lastName","Reference Lab Last Name ",bca
+693,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.middleInitial","Reference Lab Middle Initial ",bca
+694,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.nameSuffix","Reference Lab Name Suffix ",bca
+695,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.npiReferringProviderNumber","Reference Lab NPI ",bca
+696,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.referringProviderNumber","Reference Lab Provider Number ",bca
+697,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.address.state","Reference Lab State ",bca
+698,"Give Business name for DecisionResponse.scrubbedClaim.claim.referenceLab.address.zip","Reference Lab ZIP Code ",bca
+699,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.id","Referral/Authorization ID ",bca
+700,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider","Referring Provider ",bca
+701,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.address","Referring Provider Address Details ",bca
+702,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.address.street1","Referring Provider Address Line 1 ",bca
+703,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.address.city","Referring Provider City ",bca
+704,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.entityType","Referring Provider Entity Type ",bca
+705,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.entityType.id","Referring Provider Entity Type ID ",bca
+706,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.firstName","Referring Provider First Name ",bca
+707,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.name","Referring Provider Full Name ",bca
+708,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.id","Referring Provider ID ",bca
+709,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.lastName","Referring Provider Last Name ",bca
+710,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.lastNameUnstripped","Referring Provider Last Name With Special Characters ",bca
+711,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.middleInitial","Referring Provider Middle Initial ",bca
+712,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.nameSuffix","Referring Provider Name Suffix ",bca
+713,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.notes","Referring Provider note ",bca
+714,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.referringProviderNumber.npi","Referring Provider NPI ",bca
+715,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.referringProviderNumber.providerNumber","Referring Provider Number ",bca
+716,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.referringProviderNumber","Referring Provider Numbers ",bca
+717,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.specialtyId","Referring Provider Specialty ID ",bca
+718,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.address.state","Referring Provider State ",bca
+719,"Give Business name for ProviderBKM.Fetch Ansi Specialty Code(DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.ansiSpecialtyId,Decision Response)"","Referring Provider Taxonomy Code ",bca
+720,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.ansiSpecialtyId","Referring Provider Taxonomy ID ",bca
+721,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.type","Referring Provider Type ",bca
+722,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.type.id","Referring Provider Type ID ",bca
+723,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.address.zip","Referring Provider ZIP Code ",bca
+724,"Give Business name for flatten(Eligibility Benefits.relatedEntity)","Related Entity ",bca
+725,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).relationShipToInsured","Relationship To Insured Primary ",bca
+726,"Give Business name for (PatientOrInsuranceBKM.Fetch Secondary PayerDecisionResponse).relationShipToInsured","Relationship To Insured Secondary ",bca
+727,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.postOperativeCare.relinquishedCareDate","Relinquished Care Date ",bca
+728,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.remainOffWork","Remain Off Work ",bca
+729,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider","Rendering Provider ",bca
+730,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.address","Rendering Provider Address ",bca
+731,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.billedName","Rendering Provider Billing Name ",bca
+732,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderEnrollmentStatus.credentialingStatusId","Rendering Provider Credentialing Status ID ",bca
+733,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.entityType","Rendering Provider Entity Type ",bca
+734,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.entityType.id","Rendering Provider Entity Type ID ",bca
+735,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.entityType.name","Rendering Provider Entity Type Name ",bca
+736,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.firstName","Rendering Provider First Name ",bca
+737,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.providerGroupId","Rendering Provider Group ID ",bca
+738,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.id","Rendering Provider ID ",bca
+739,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.lastName","Rendering Provider Last Name ",bca
+740,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.lastNameUnstripped","Rendering Provider Last Name With Special Characters ",bca
+741,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.legacyNumber","Rendering Provider Legacy Number ",bca
+742,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.middleInitial","Rendering Provider Middle Initial ",bca
+743,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.name","Rendering Provider Name ",bca
+744,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.nameSuffix","Rendering Provider Name Suffix ",bca
+745,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.npi","Rendering Provider NPI ",bca
+746,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.verifiedStatusId","Rendering Provider NPI Verified Status ",bca
+747,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.providerNumber","Rendering Provider Number ",bca
+748,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.providerNumberCategoryId","Rendering Provider Number Category ID ",bca
+749,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.npiGoVerifiedStatusId","Rendering Provider Number Go Verified Status ",bca
+750,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.specialtyId","Rendering Provider Specialty ID ",bca
+751,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.address.state","Rendering Provider State ",bca
+752,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.ansiSpecialtyAnsiCode","Rendering Provider Taxonomy Code ",bca
+753,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.ansiSpecialtyId","Rendering Provider Taxonomy ID ",bca
+754,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.ansiSpecialtyName","Rendering Provider Taxonomy Name ",bca
+755,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.type","Rendering Provider Type ",bca
+756,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.type.id","Rendering Provider Type ID ",bca
+757,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.type.name","Rendering Provider Type Name ",bca
+758,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.type.displayName","Rendering Provider Type Name With Display Formatting ",bca
+759,"Give Business name for ##Verify this is appropriate for your model before use## if(Report Map!=null)  then Report Map.reportData else []","Report Data ",bca
+760,"Give Business name for Reference Data.reportMaps[item.id = 81]","Report Map ",bca
+761,"Give Business name for Reference Data.reportMaps","Report Maps ",bca
+762,"Give Business name for DecisionResponse.scrubbedClaim.claim.reserved19Note","Reserved 19 Note ",bca
+763,"Give Business name for DecisionResponse.scrubbedClaim.crossModel.birthReserved19Note","Reserved Note Validation ",bca
+764,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicaidResubmissionCode","Resubmission Code ",bca
+765,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicaidResubmissionOrigRefNo","Resubmission Original Ref No ",bca
+766,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.returnToFullDuty","Return To Full Duty ",bca
+767,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.returnToModifiedWork","Return To Modified Work ",bca
+768,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.autoFormatting.rhc","RHC Auto Encounter Formatting ",bca
+769,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.rhc","RHC Claim Flag ",bca
+770,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.credentialed.rhc","RHC Credentialed ",bca
+771,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.type.rhc","RHC Department Flag ",bca
+772,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.settings.insuranceGroups.rhc","RHC Insurance Group ",bca
+773,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides","Routing Address ",bca
+774,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.street1","Routing Address Line 1 ",bca
+775,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.street2","Routing Address Line 2 ",bca
+776,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.city","Routing City ",bca
+777,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.claimSubmissionCategoryId","Routing Claim Submission Category ID ",bca
+778,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.emcCode","Routing EMC Code ",bca
+779,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.enrollmentCategoryId","Routing Enrollment Category ID ",bca
+780,"Give Business name for flatten([DecisionResponse.scrubbedClaim.referenceData.routingBcbsDestinations.bcbsDestinations])","Routing Entity ID ",bca
+781,"Give Business name for flatten(Decision Context.DecisionResponse.refData.routingBcbsDestinations.bcbsDestinations)","Routing Entity IDs ",bca
+782,"Give Business name for DecisionResponse.scrubbedClaim.claim.routing.bcbsDestination.entityName","Routing Entity Name ",bca
+783,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.id","Routing Insurance Package ID ",bca
+784,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.insuranceReportingCategoryId","Routing Insurance Reporting Category ID ",bca
+785,"Give Business name for PatientOrInsuranceBKM.Get Medical Group Enrollment Details(     enrollmentCategoryId : Routing Enrollment Category ID,    refData : Reference Data )"","Routing Medical Group Enrollment Status ",bca
+786,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.routingProgram.id","Routing Program ID ",bca
+787,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.state","Routing State ",bca
+788,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.destinationOverrides.zip","Routing ZIP Code ",bca
+789,"Give Business name for DecisionResponse.scrubbedClaim.claim.schedulingProviderId","Scheduling Provider ID ",bca
+790,"Give Business name for DecisionResponse.refData.providers[item.id = DecisionResponse.scrubbedClaim.claim.schedulingProviderId].providerType","Scheduling Provider Type ID ",bca
+791,"Give Business name for DecisionResponse.scrubState","Scrub State ",bca
+792,"Give Business name for DecisionResponse.scrubbedClaim.claim.diagnosis.secondaryCode","Second Claim Diagnosis Code ",bca
+793,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.consultation.secondOpinionForSurgery","Second Opinion For Surgery ",bca
+794,"Give Business name for (Secondary Payer).acceptsAssignment","Secondary Accepts Assignment ",bca
+795,"Give Business name for (Secondary Payer).insurancePackage.adjudicationProgramId","Secondary Adjudication Program ID ",bca
+796,"Give Business name for (Secondary Payer).claimSubmissionCategory.billingTypeId","Secondary Billing Type ID ",bca
+797,"Give Business name for (Secondary Payer).insurancePackage.casePolicyId","Secondary Case Policy Type ID ",bca
+798,"Give Business name for (Secondary Payer).insurancePackage.claimFilingIndicator.ansiCode","Secondary Claim Filing Indicator Ansi Code ",bca
+799,"Give Business name for (Secondary Payer).insurancePackage.claimFilingIndicator.id","Secondary Claim Filing Indicator ID ",bca
+800,"Give Business name for DecisionResponse.scrubbedClaim.claim.secondaryOutstandingAmount","Secondary Claim Outstanding Amount ",bca
+801,"Give Business name for (Secondary Payer).insurancePackage.claimRuleCategory.id","Secondary Claim Rule Category ID ",bca
+802,"Give Business name for (Secondary Payer).insurancePackage.claimSubmissionCategory.id","Secondary Claim Submission Category ID ",bca
+803,"Give Business name for (Secondary Payer).insurancePackage.customInsuranceGroup.id","Secondary Custom Insurance Group ID ",bca
+804,"Give Business name for (Secondary Payer).insurancePackage.enrollmentCategory.id","Secondary Enrollment Category ID ",bca
+805,"Give Business name for (Secondary Payer).insurancePackage.governmentFundedTypeId","Secondary Government Funded Type ID ",bca
+806,"Give Business name for (PatientOrInsuranceBKM.Fetch Secondary PayerDecisionResponse).caseNumber","Secondary Insurance Case Number ",bca
+807,"Give Business name for (Secondary Payer).insurancePackage.cobaCode","Secondary Insurance COBA Code ",bca
+808,"Give Business name for (Secondary Payer).insurancePackage.crossOverCode","Secondary Insurance Crossover Code ",bca
+809,"Give Business name for (Secondary Payer).eraRecordSourceId","Secondary Insurance ERA Source ID ",bca
+810,"Give Business name for (Secondary Payer).groupId","Secondary Insurance Group ID ",bca
+811,"Give Business name for (Secondary Payer).issueDate","Secondary Insurance Issue Date ",bca
+812,"Give Business name for (Secondary Payer).insurancePackage","Secondary Insurance Package ",bca
+813,"Give Business name for (Secondary Payer).insurancePackage.payerAddress.street1","Secondary Insurance Package Address ",bca
+814,"Give Business name for (Secondary Payer).insurancePackage.payerAddress.street2","Secondary Insurance Package Address Line 2 ",bca
+815,"Give Business name for (Secondary Payer).insurancePackage.payerAddress.city","Secondary Insurance Package City ",bca
+816,"Give Business name for (Secondary Payer).insurancePackage.fullName","Secondary Insurance Package Full Name ",bca
+817,"Give Business name for (Secondary Payer).insurancePackage.id","Secondary Insurance Package ID ",bca
+818,"Give Business name for (Secondary Payer).insurancePackage.name","Secondary Insurance Package Name ",bca
+819,"Give Business name for (Secondary Payer).insurancePackage.payerAddress.state","Secondary Insurance Package State ",bca
+820,"Give Business name for (Secondary Payer).insurancePackage.payerAddress.zip","Secondary Insurance Package Zip Code ",bca
+821,"Give Business name for (Secondary Payer).id","Secondary Insurance Plan ID ",bca
+822,"Give Business name for (Secondary Payer).insurancePackage.insuranceReportingCategory.id","Secondary Insurance Reporting Category ID ",bca
+823,"Give Business name for (Secondary Payer).insurancePackage.insuranceReportingCategory.name","Secondary Insurance Reporting Category Name ",bca
+824,"Give Business name for (Secondary Payer).insurancePackage.insuranceTypeId","Secondary Insurance Type ID ",bca
+825,"Give Business name for (Secondary Payer).insurancePackage.medicalGroup.groupNumber.legacyNumber","Secondary Medical Group Legacy Number ",bca
+826,"Give Business name for (Secondary Payer).insurancePackage.medicalGroup.groupNumber","Secondary Medical Group Number ",bca
+827,"Give Business name for PatientOrInsuranceBKM.Fetch Secondary PayerDecisionResponse.insurancePackage.settings.medicareReplacement","Secondary Medicare Replacement ",bca
+828,"Give Business name for (Secondary Payer).insurancePackage.settings.medicareReplacement","Secondary Medicare Replacement Flag ",bca
+829,"Give Business name for (Secondary Payer).memberId","Secondary Member ID ",bca
+830,"Give Business name for (Secondary Payer).insurancePackage.claimSubmissionCategory","Secondary NPI Status ID ",bca
+831,"Give Business name for (Secondary Payer).insurancePackage.claimSubmissionCategory.usePatientAsSubscriber","Secondary Patient As Subscriber ",bca
+832,"Give Business name for (Secondary Payer).insurancePackage.relationShipToInsured.id","Secondary Patient Relationship To Insured ID ",bca
+833,"Give Business name for PatientOrInsuranceBKM.Fetch Secondary Payer(DecisionResponse)","Secondary Payer ",bca
+834,"Give Business name for (Secondary Payer).insurancePackage.settings.insuranceGroups.pbc","Secondary PBC Insurance Group ",bca
+835,"Give Business name for (Secondary Payer).subscriber.address.street1","Secondary Policy Holder Address Line1 ",bca
+836,"Give Business name for (Secondary Payer).subscriber.address.city","Secondary Policy Holder City ",bca
+837,"Give Business name for (Secondary Payer).subscriber.address.countryId","Secondary Policy Holder Country ID ",bca
+838,"Give Business name for (Secondary Payer).subscriber.birthDate","Secondary Policy Holder Date Of Birth ",bca
+839,"Give Business name for (Secondary Payer).subscriber.employer.name","Secondary Policy Holder Employer Name ",bca
+840,"Give Business name for (Secondary Payer).subscriber.employer.address.state","Secondary Policy Holder Employer State ",bca
+841,"Give Business name for (Secondary Payer).subscriber.entityType.id","Secondary Policy Holder Entity Type ID ",bca
+842,"Give Business name for (Secondary Payer).subscriber.firstName","Secondary Policy Holder First Name ",bca
+843,"Give Business name for (Secondary Payer).subscriber.lastName","Secondary Policy Holder Last Name ",bca
+844,"Give Business name for (Secondary Payer).subscriber.middleInitial","Secondary Policy Holder Middle Initial ",bca
+845,"Give Business name for (Secondary Payer).subscriber.entityType.displayName","Secondary Policy Holder Name ",bca
+846,"Give Business name for (Secondary Payer).subscriber.sex","Secondary Policy Holder Sex ",bca
+847,"Give Business name for (Secondary Payer).subscriber.address.state","Secondary Policy Holder State ",bca
+848,"Give Business name for (Secondary Payer).subscriber.address.zip","Secondary Policy Holder ZIP Code ",bca
+849,"Give Business name for (Secondary Payer).insurancePackage.productTypeId","Secondary Product Type ID ",bca
+850,"Give Business name for (Secondary Payer).insurancePackage.renderingProviderNumber","Secondary Rendering Provider Number ",bca
+851,"Give Business name for (PatientOrInsuranceBKM.Fetch Secondary PayerDecisionResponse).insurancePackage.settings.insuranceGroups.rhc","Secondary RHC Insurance Group ",bca
+852,"Give Business name for (Secondary Payer).insurancePackage.routingProgram.id","Secondary Routing Program ID ",bca
+853,"Give Business name for (Secondary Payer).insurancePackage.firstName","Secondary Subscriber First Name ",bca
+854,"Give Business name for (Secondary Payer).insurancePackage.lastName","Secondary Subscriber Last Name ",bca
+855,"Give Business name for (Secondary Payer).insurancePackage.supervisingProviderNumber","Secondary Supervising Provider Number ",bca
+856,"Give Business name for (Secondary Payer).workersCompensation.state","Secondary Workers Comp State ",bca
+857,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.miscellaneousFields.serviceAuthExceptionCode","Service Auth Exception Code ",bca
+858,"Give Business name for DecisionResponse.scrubbedClaim.claim.signature","Signature ",bca
+859,"Give Business name for DecisionResponse.scrubbedClaim.claim.signature.assignmentOfBenefitsYN","Signature On File For Assignment Of Benefits ",bca
+860,"Give Business name for DecisionResponse.scrubbedClaim.claim.signature.releaseOfInformationYN","Signature On File For Release Of Information ",bca
+861,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.signatureSourceCode","Signature Source ID ",bca
+862,"Give Business name for ProviderBKM.Provider Exist","Signoff Provider ID ",bca
+863,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.similarConditionYN","Similar Past Condition ",bca
+864,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.similarConditionDescription","Similar Past Condition Description ",bca
+865,"Give Business name for DecisionResponse.scrubbedClaim.claim.slidingFeePlan.patientInsuranceId","Sliding Fee Insurance ID ",bca
+866,"Give Business name for PatientOrInsuranceBKM.Fetch Sliding Fee Plan Details(decisionResponse: DecisionResponse, insurancePlanId: Decision Response.scrubbedClaim.claim.slidingFeePlan.patientInsuranceId)"","Sliding Fee Plan ID ",bca
+867,"Give Business name for DecisionResponse.scrubbedClaim.claim.slidingFeePlan.name","Sliding Fee Plan Name ",bca
+868,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.slidingFeePlans","Sliding Fee Plans ",bca
+869,"Give Business name for DecisionResponse.activeInsurance.slidingFee.programId","Sliding Fee Program ",bca
+870,"Give Business name for Ref Patient Insurances.slidingFeeProgramId","Sliding Fee Program ID ",bca
+871,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.primarytinConfig","SMG East Primary TIN Config ",bca
+872,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.primarytinConversionDate","SMG East Primary TIN Conversion Date ",bca
+873,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.primarytinExpirationDate","SMG East Primary TIN Expiration Date ",bca
+874,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.secondarytinConfig","SMG East Secondary TIN Config ",bca
+875,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.secondarytinConversionDate","SMG East Secondary TIN Conversion Date ",bca
+876,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.secondarytinExpirationDate","SMG East Secondary TIN Expiration Date ",bca
+877,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.solelyRelatedToAutoAccidentYN","Solely Related to Auto Accident ",bca
+878,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialHandling","Special Handling ",bca
+879,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialHandling.houseHoldByDocumentID","Special Handling Household by Document Flag ",bca
+880,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialHandling.overrides","Special Handling Override ",bca
+881,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialHandling.overrides.address","Special Handling Override Address ",bca
+882,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialHandling.supportingDocumentsOnly","Special Handling Supporting Documents Only Flag ",bca
+883,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.miscellaneousFields.specialProgramCode","Special Program Code ",bca
+884,"Give Business name for ProviderBKM.Fetch Ansi Code(DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.ansiSpecialtyId,Decision Response)"","Specialty Code ",bca
+885,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup","Specialty Field Group ",bca
+886,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.spinalManipulation.condition","Spinal Manipulation Condition ",bca
+887,"Give Business name for DecisionResponse.dbStack","Stack ",bca
+888,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.subjectiveComplaints","Subjective Complaints ",bca
+889,"Give Business name for DecisionResponse.scrubbedClaim.claim.submissionOverrides","Submission Overrides ",bca
+890,"Give Business name for DecisionResponse.activeInsurance.subscriber.address","Subscriber Address ",bca
+891,"Give Business name for DecisionResponse.activeInsurance.subscriber.address.street2","Subscriber Address Line 2 ",bca
+892,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.address","Supervising Provider Address ",bca
+893,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.billableOverride","Supervising Provider Billable Flag ",bca
+894,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.billedName","Supervising Provider Billing Name ",bca
+895,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderEnrollmentStatus.credentialingId","Supervising Provider Credentialing ID ",bca
+896,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderEnrollmentStatus.credentialingStatusId","Supervising Provider Credentialing Status ID ",bca
+897,"Give Business name for Reference Data.providerNumbers.departmentIds","Supervising Provider Department ID ",bca
+898,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderEnrollmentStatus","Supervising Provider Enrollment Status Entity ",bca
+899,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.entityType","Supervising Provider Entity Type ",bca
+900,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.firstName","Supervising Provider First Name ",bca
+901,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.providerGroupId","Supervising Provider Group ID ",bca
+902,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.providerGroupName","Supervising Provider Group Name ",bca
+903,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.id","Supervising Provider ID ",bca
+904,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.lastName","Supervising Provider Last Name ",bca
+905,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.lastNameUnstripped","Supervising Provider Last Name With Special Characters ",bca
+906,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber.legacyNumber","Supervising Provider Legacy Number ",bca
+907,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.middleInitial","Supervising Provider Middle Initial ",bca
+908,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.name","Supervising Provider Name ",bca
+909,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.nameSuffix","Supervising Provider Name Suffix ",bca
+910,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber.npi","Supervising Provider NPI ",bca
+911,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber","Supervising Provider Number ",bca
+912,"Give Business name for FetchProviderNumber.Execute(Department ID:Department ID,Provider ID:Supervising Provider ID,Provider Number Category ID:Destination PNC ID, Reference Data:Reference Data)"","Supervising Provider Number Exists Check ",bca
+913,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.supervisingProviderNumberFromPnc","Supervising Provider Number From Pnc ",bca
+914,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber.npiGoVerifiedStatusId","Supervising Provider Number Go Verified Status ",bca
+915,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.specialtyId","Supervising Provider Specialty ID ",bca
+916,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.ssn","Supervising Provider SSN ",bca
+917,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.address.state","Supervising Provider State ",bca
+918,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.ansiSpecialtyAnsiCode","Supervising Provider Taxonomy Code ",bca
+919,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber.ansiSpecialtyAnsiCode","Supervising Provider Taxonomy Code From Payer Enrollment ",bca
+920,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.ansiSpecialtyId","Supervising Provider Taxonomy ID ",bca
+921,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber.ansiSpecialtyId","Supervising Provider Taxonomy ID From Payer Enrollment ",bca
+922,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.ansiSpecialtyName","Supervising Provider Taxonomy Name ",bca
+923,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.type","Supervising Provider Type ",bca
+924,"Give Business name for ProviderBKM.Fetch Provider Type Name","Supervising Provider Type Display Name ID ",bca
+925,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.type.id","Supervising Provider Type ID ",bca
+926,"Give Business name for ProviderBKM.Fetch Provider Details(DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.type.id,Decision Response)"","Supervising Provider Type Name ",bca
+927,"Give Business name for DecisionResponse.scrubbedClaim.claim.suppressClaimForm","Suppress Claim Form ",bca
+928,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.groupNumber.ansiSpecialtyAnsiCode","Taxonomy Code ",bca
+929,"Give Business name for DecisionResponse.scrubbedClaim.claim.appointment.isDistantSiteTelehealth","Telehealth Distant Site Flag ",bca
+930,"Give Business name for DecisionResponse.scrubbedClaim.claim.therapyBeginDate","Therapy Begin Date For Formatting ",bca
+931,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.hourOfExam","Time Of First Examination Or Treatment ",bca
+932,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.breastCare.tplDenialDate","TPL Denial Date ",bca
+933,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.transactions","Transaction ",bca
+934,"Give Business name for DecisionResponse.transferType","Transfer Type ID ",bca
+935,"Give Business name for DecisionResponse.activeInsurancePrefix","Transfer Type Name ",bca
+936,"Give Business name for DecisionResponse.scrubbedClaim.claim.ambulance.trips","Trips ",bca
+937,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.typeOfBill.code","Type Of Bill Code ",bca
+938,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.credentialed.uc","UC Credentialed ",bca
+939,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimSubmissionCategory.usePatientAsSubscriber","Use Patient as Policy Holder ",bca
+940,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.primaryProviderId","Usual Provider ",bca
+941,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.memberIdFormat","Valid ID Number Format ",bca
+942,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityClaimCodes.valueCodes","Value Code ",bca
+943,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode12","Value Code 12 ",bca
+944,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode14","Value Code 14 ",bca
+945,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode15","Value Code 15 ",bca
+946,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode16","Value Code 16 ",bca
+947,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode24","Value Code 24 ",bca
+948,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode41","Value Code 41 ",bca
+949,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode42","Value Code 42 ",bca
+950,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode43","Value Code 43 ",bca
+951,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode44","Value Code 44 ",bca
+952,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode47","Value Code 47 ",bca
+953,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode80","Value Code 80 ",bca
+954,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes","Value Codes ",bca
+955,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.validEnrollmentStatuses.verify","Verifies Of Valid Enrollment Status ",bca
+956,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.chargeAmounts.procedureCode","Verify Procedure Code availability In fee schedule ",bca
+957,"Give Business name for DecisionResponse.scrubbedClaim.claim.visitBillId","Visit Bill ID ",bca
+958,"Give Business name for Reference Data.visitDetails","Visit Details ",bca
+959,"Give Business name for Visit Details.visitId","Visit ID ",bca
+960,"Give Business name for Reference Data.visitDetails.levelOfCare.id","Visit Segment Level Of Care ID ",bca
+961,"Give Business name for Reference Data.visitDetails.levelOfCare.name","Visit Segment Level Of Care Name ",bca
+962,"Give Business name for Reference Data.visitDetails.patientId","Visit Segment Patient ID ",bca
+963,"Give Business name for Reference Data.visitDetails.visitBillId","Visit Segment Visit Bill ID ",bca
+964,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.wcbRatingCode","WCB Rating Code ",bca
+965,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.delayPatientsRecoveryYN","Will anything impede Or delay patient recovery? ",bca
+966,"Give Business name for DecisionResponse.activeInsurance.caseNumber","Workers Comp Claim Number ",bca
+967,"Give Business name for DecisionResponse.activeInsurance.workersCompensation.state","Workers Comp State ",bca
+968,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.wrapBillingMCO","Wrap Billing MCO ",bca
+969,"Give Business name for DecisionResponse.scrubbedClaim.claim.wrapClaimType","Wrap Claim Type ",bca
+970,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.credentialed.xhc","XHC Credentialed ",bca
+971,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.autoFormatting.xhc","XHC Encounter Formatting ",bca
+972,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.settings.insuranceGroups.parent","XHC Insurance Group ",bca
+973,"Give Business name for FetchUtilities.Fetch Practice Setting(DecisionResponse.scrubbedClaim.referenceData.practiceSettings,<?>)"","Claim Custom Fields ",bca
+974,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.wellChildCare.epsdtReferralReasons","EPSDT Referral Reason ",bca
+975,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.originalId","Original Supervising Provider ID ",bca
+976,"Give Business name for (Primary Payer).insurancePackage.bcbsDestinations","Primary BCBS Destination List ",bca
+977,"Give Business name for DecisionResponse.activeInsurance.policyNote","Quickview Policy Details Note ",bca
+978,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.referringProviderNumbers","Ref Referring Provider Numbers ",bca
+979,"Give Business name for (Secondary Payer).insurancePackage.bcbsDestinations","Secondary BCBS Destination List ",bca
+980,"Give Business name for DecisionResponse.scrubbedClaim.claim.similarIllnessDate","Similar Illness Date ",bca
+981,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderEnrollmentStatus.npiOnFilesStatusId","Supervising Provider Enrollment File Status Id ",bca
+982,"Give Business name for DecisionResponse.scrubbedClaim.claim.status.primaryDenied","Primary Claim Denied Flag ",bca
+983,"Give Business name for DecisionResponse.scrubbedClaim.claim.allowedCharactersClass.nameOnly","Allowed Characters in Name Only ANSI Segments ",bca
+984,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.clia.requiredByPayer","CLIA Required By Payer Flag ",bca
+985,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.clia.sentOnElectronicClaims","CLIA Sent On Electronic Claims Flag ",bca
+986,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.departmentNumbers","Department Numbers ",bca
+987,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address.street2","Guarantor Address Line 2 ",bca
+988,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.guarantor.firstName","Guarantor First Name With Special Characters ",bca
+989,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.guarantor.lastName","Guarantor Last Name With Special Characters ",bca
+990,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.guarantor.middleInitial","Guarantor Middle Initial With Special Characters ",bca
+991,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hospice.npiReferringProviderNumber","Hospice-Home Health Agency Referring Provider Number ",bca
+992,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.contactPhone","Insurance Package Contact Phone ",bca
+993,"Give Business name for (Reference Data).localHolidays","Local Holidays ",bca
+994,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.voidyn","NYMcaidHCFA Void Flag ",bca
+995,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.lastName","Patient Last Name With Special Characters ",bca
+996,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.middleInitial","Patient Middle Initial With Special Characters ",bca
+997,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.client.nameSuffix","Patient Name Suffix With Special Characters ",bca
+998,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).insurancePackage.settings.insuranceGroups.rhc","Primary RHC Insurance Group ",bca
+999,"Give Business name for DecisionResponse.scrubbedClaim.claim.pxAutomated","PX Automated ",bca
+1000,"Give Business name for DecisionResponse.activeInsurance.recentEligibility.benefits","Recent Eligibility Benefits ",bca
+1001,"Give Business name for DecisionResponse.scrubbedClaim.claim.reserved10D","Reserved 10D Note ",bca
+1002,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.ilForm.tplStatusCode","TPL Status ",bca
+1003,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hospice.firstName","Hospice-Home Health Agency Referring Provider First Name ",bca
+1004,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hospice.lastName","Hospice-Home Health Agency Referring Provider Last Name ",bca
+1005,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.effectiveDate","Insurance Package Effective Date ",bca
+1006,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.medicaid.txBenefitCode","Medicaid TX Benefit Code ",bca
+1007,"Give Business name for DecisionResponse.scrubbedClaim.claim.allowedCharactersClass.name","Patient Name Allowed Characters ",bca
+1008,"Give Business name for (PatientOrInsuranceBKM.Fetch Primary PayerDecisionResponse).insurancePackage.nameUnstripped","Primary Insurance Package Name With Special Characters ",bca
+1009,"Give Business name for (Secondary Payer).insurancePackage.nameUnstripped","Secondary Insurance Package Name With Special Characters ",bca
+1010,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.rehabilitationYN","Will The Patient Require Rehabilitation ",bca
+1011,"Give Business name for DecisionResponse.scrubbedClaim.claim.typeOfBill.id","Type Of Bill ID ",bca
+1012,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.name","Insurance Package Name ",bca
+1013,"Give Business name for (Secondary Payer).workersCompensation.countryId","Secondary Workers Comp Country ID ",bca
+1014,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.dateOfFirstConsult","When Did Patient First Consult You For This Condition ",bca
+1015,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.disfigurementYN","Permanent Disfigurement ",bca
+1016,"Give Business name for (Primary Payer).workersCompensation.countryId","Primary Workers Comp Country ID ",bca
+1017,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.previouslyTreatedPatient","Previously Treated Patient ",bca
+1018,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.billable","Supervising Provider Billable ",bca
+1019,"Give Business name for DecisionResponse.activeInsurance","Patient Insurance ",bca
+1020,"Give Business name for DecisionResponse.activeInsurance.eraRecordSourceId ","Insurance ERA Record Source ID ",bca
+1021,"Give Business name for (Primary Payer).insurancePackage.customInsuranceGroup.id","Primary Custom Insurance Group ID ",bca
+1022,"Give Business name for DecisionResponse.currentDate.practice","Current Practice Date Time ",bca
+1023,"Give Business name for DecisionResponse.scrubbedClaim.claim.anesthesia.settings.rounding","Charge Creation Rounding ",bca
+1024,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.enable2WrapBilling","Two-Claim Wrap Billing Flag ",bca
+1025,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hospice.homebound","Patient Is Homebound ",bca
+1026,"Give Business name for flatten([DecisionResponse.scrubbedClaim.referenceData.accessibleResources.resources])","athenaNet Required Permissions Flag ",bca
+1027,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.governmentDesignation.claimTypes","Department Government Designation Clinic Claim Type ",bca
+1028,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.id","Active Insurance Package ID ",bca
+1029,"Give Business name for isSelfPay.Execute(DecisionResponse.activeInsurance)","Self-Pay Flag ",bca
+1030,"Give Business name for DecisionResponse.scrubbedClaim.claim.diagnosis.details","Diagnosis Details ",bca
+1031,"Give Business name for DecisionResponse.scrubbedClaim.claim.id","Claim ID ",bca
+1032,"Give Business name for DecisionResponse.scrubbedClaim.claim.otherScrubSettings","Other Scrub Settings ",bca
+1033,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.taxId","Medical Group Tax ID ",bca
+1034,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.payerAddress","Insurance Package Payor Address ",bca
+1035,"Give Business name for DecisionResponse.scrubbedClaim.overrideLegacyRuleIds","Override Legacy Rule ID ",bca
+1036,"Give Business name for DecisionResponse.scrubbedClaim.notes.action","Action ",bca
+1037,"Give Business name for DecisionResponse.scrubbedClaim.notes.additionalText","Additional Text ",bca
+1038,"Give Business name for DecisionResponse.scrubbedClaim.notes.bypassAthenaOnePermissions","Bypass athenaOne Permissions ",bca
+1039,"Give Business name for DecisionResponse.scrubbedClaim.notes.checkForAthenaKickCode","Athena Kick Code Flag ",bca
+1040,"Give Business name for DecisionResponse.scrubbedClaim.notes.checkForExactNote","Unique Informational Claim Note Flag ",bca
+1041,"Give Business name for DecisionResponse.scrubbedClaim.notes.checkForExisting","Informational Claim Note Flag ",bca
+1042,"Give Business name for DecisionResponse.scrubbedClaim.notes.errorText","Error Text ",bca
+1043,"Give Business name for DecisionResponse.scrubbedClaim.notes.fixText","Fix Text ",bca
+1044,"Give Business name for DecisionResponse.scrubbedClaim.notes.genericFixText","Generic Fix Text ",bca
+1045,"Give Business name for DecisionResponse.scrubbedClaim.notes.nextScrubDate","Next Scrub Date ",bca
+1046,"Give Business name for DecisionResponse.scrubbedClaim.notes.class","Class ",bca
+1047,"Give Business name for DecisionResponse.scrubbedClaim.notes.visitFixText","Visit Fix Text ",bca
+1048,"Give Business name for DecisionResponse.scrubbedClaim.notes.reasonTable","Reason Table ",bca
+1049,"Give Business name for DecisionResponse.scrubbedClaim.notes.reasonRowID","Reason Row ID ",bca
+1050,"Give Business name for DecisionResponse.scrubbedClaim.notes.userOverride","User Override Available ",bca
+1051,"Give Business name for DecisionResponse.scrubbedClaim.notes.genericAdditionalText","Generic Additional Text ",bca
+1052,"Give Business name for DecisionResponse.scrubbedClaim.addAttachmentStubs.ruleSpecific","RULESPECIFIC ",bca
+1053,"Give Business name for DecisionResponse.scrubbedClaim.addAttachmentStubs.forceAttachmentOnSecondary","Add Attachment Stub On Secondary ",bca
+1054,"Give Business name for DecisionResponse.scrubbedClaim.addAttachmentStubs.forceAttachmentOnBilledClaim","Add Attachment Stub On Previously Billed Claim ",bca
+1055,"Give Business name for DecisionResponse.scrubbedClaim.dropClaimToPaper.droppedTo","Force Drop To ",bca
+1056,"Give Business name for DecisionResponse.scrubbedClaim.dropClaimToPaper.overrideManualDrop","Force Drop Override Existing Reason Flag ",bca
+1057,"Give Business name for DecisionResponse.scrubbedClaim.dropClaimToPaper.skipAttachment","Force Drop Skip New Attachment Stub ",bca
+1058,"Give Business name for DecisionResponse.scrubbedClaim.dropClaimToPaper.overMandatedElectronicRequirmentFlag","Force Drop To Paper Over Mandated Electronic Requirement Flag ",bca
+1059,"Give Business name for DecisionResponse.scrubbedClaim.dropClaimToPaper.forceSecondaryManualDrop","Force Drop Secondary To Paper For All Attachments Flag ",bca
+1060,"Give Business name for DecisionResponse.scrubbedClaim.overridePrintZeroDollarCharges.value","Print Zero Doller Charges ",bca
+1061,"Give Business name for DecisionResponse.scrubbedClaim.dynamicReferences.type","Dynamic Reference Type ",bca
+1062,"Give Business name for DecisionResponse.scrubbedClaim.dynamicReferences.chargeid","Dynamic Reference Charge Id ",bca
+1063,"Give Business name for DecisionResponse.scrubbedClaim.dynamicReferences.attribute","Dynamic Reference Attribute ",bca
+1064,"Give Business name for DecisionResponse.scrubbedClaim.dynamicReferences.markup","Dynamic Reference Mark Up ",bca
+1065,"Give Business name for DecisionResponse.scrubbedClaim.dynamicReferences.params","Dynamic Reference Param Text ",bca
+1066,"Give Business name for DecisionResponse.scrubbedClaim.processTables.operation","Process Table Operation ",bca
+1067,"Give Business name for DecisionResponse.scrubbedClaim.processTables.tableName","Process Table Name ",bca
+1068,"Give Business name for DecisionResponse.scrubbedClaim.processTables.userName","Process Table User Name ",bca
+1069,"Give Business name for DecisionResponse.scrubbedClaim.processTables.tableRows","Process Table Rows ",bca
+1070,"Give Business name for DecisionResponse.scrubbedClaim.processTables.columnNames","Process Table Columns ",bca
+1071,"Give Business name for DecisionResponse.scrubbedClaim.savedData.key","Add Field Name ",bca
+1072,"Give Business name for DecisionResponse.scrubbedClaim.savedData.value","Add Field Value ",bca
+1073,"Give Business name for DecisionResponse.scrubbedClaim.savedData.addToExisting","Add To Existing Flag ",bca
+1074,"Give Business name for DecisionResponse.scrubbedClaim.savedData.chargeId","Charge ID ",bca
+1075,"Give Business name for DecisionResponse.scrubbedClaim.claimAdjustments.transactionReasonId","Adjustment Reason ",bca
+1076,"Give Business name for DecisionResponse.scrubbedClaim.claimAdjustments.distributed","Distributed ",bca
+1077,"Give Business name for DecisionResponse.scrubbedClaim.claimAdjustments.percent","Adjustment Percentage ",bca
+1078,"Give Business name for DecisionResponse.scrubbedClaim.claimAdjustments.useChargelistOutstanding","Use Charge List Outstanding ",bca
+1079,"Give Business name for DecisionResponse.scrubbedClaim.claimAdjustments.forceReadjustment","Reapply Previously Voided Adjustment Flag ",bca
+1080,"Give Business name for DecisionResponse.scrubbedClaim.claimAdjustments.chargeAdjustment","CHARGEADJUSTMENT ",bca
+1081,"Give Business name for DecisionResponse.scrubbedClaim.claimTransfer.distributed","Transfer Distributed ",bca
+1082,"Give Business name for DecisionResponse.scrubbedClaim.collectorResubmission.dropKicks","Release Kick Codes ",bca
+1083,"Give Business name for DecisionResponse.scrubbedClaim.collectorResubmission.sameIrc","Same IRC ",bca
+1084,"Give Business name for DecisionResponse.scrubbedClaim.deleteClaimAttributes.removeSecondaryPayer","Remove Secondary Payer Info ",bca
+1085,"Give Business name for (Decision Context).Confirm Execution","Confirm Execution  ",bca
+1086,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.caForm.objectiveFindings","Objective Findings - Physical Exam ",bca
+1087,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.orderingProviderNumber.referringProviderNumber","Ordering Provider Numbers ",bca
+1088,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.relatedToAutoAccident","Patient's Condition Related To Auto Accident ",bca
+1089,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.relatedToEmployment","Patient's Condition Related To Employment ",bca
+1090,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.department.placeOfService","Place Of Service Details ",bca
+1091,"Give Business name for Reference Data.patientInsurances.insuranceReportingCategoryId","Ref Patient Insurance Reporting Category ID ",bca
+1092,"Give Business name for DecisionResponse.refData.patientRoundingDetails","Ref Patient Rounding Details ",bca
+1093,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.specialtyDetails","Ref Specialty Details ",bca
+1094,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.referralAuthorizations","Reference Data Referral Authorizations ",bca
+1095,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.typeOfBill","Type Of Bill From Payer Enrollment ",bca
+1096,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.abgQuantity","ABG Test Results ",bca
+1097,"Give Business name for DecisionResponse.scrubbedClaim.claim.allowedCharactersClass.nte","Allowed Characters Nte ",bca
+1098,"Give Business name for DecisionResponse.activeInsurance.auxiliaryFormat.attachments","Active Insurance Auxiliary Format Attachment Flag ",bca
+1099,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.disabilityIs","Disabilityis ",bca
+1100,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.disabledFromRegularWork","Disabledfromregularwork ",bca
+1101,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.maternity.estimatedDeliveryDate","Estimated Delivery Date ",bca
+1102,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.ubForm.internalControlNumber","INTERNAL CONTROL NUMBER ",bca
+1103,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.correspondenceName","Medical Group Correspondence Name ",bca
+1104,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.enrollmentStatus.payerNpiNumber","Active Insurance Medical Group Enrollment Status Payer NPI Number ",bca
+1105,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4PatientReturnToWorkLimitDate","New York Workers Comp C-4 OT-PT Date Patient Resumed Limited Work ",bca
+1106,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4PatientReturnToWorkYesDate","New York Workers Comp C-4 OT-PT Date Patient Resumed Regular Work ",bca
+1107,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4ReferringDiag","New York Workers Comp C-4 OT-PT Referring Provider Diagnosis ",bca
+1108,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.treatmentDescription","New York Workers Comp C-4 Treatment Description ",bca
+1109,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.anesthesia.originalClaimType","Original Claim Type ",bca
+1110,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2FlowRate","Oxygen Flow Rate ",bca
+1111,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2SaturationQuantity","Oxygen Saturation Test Results ",bca
+1112,"Give Business name for DecisionResponse.activeInsurance.subscriber.address.countryId","Policy Holder Country ID ",bca
+1113,"Give Business name for (Primary Payer).insurancePackage.payerAddress.phone","Primary Insurance Package Phone ",bca
+1114,"Give Business name for (Secondary Payer).insurancePackage.emcReceiverId","Secondary EMC Receiver ID ",bca
+1115,"Give Business name for DecisionResponse.refData.twinClaims","Twin Claims ",bca
+1116,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.familyPlanning","NYMcaidHCFA Family Planning Flag ",bca
+1117,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.ansiSpecialtyDeletedDate","Rendering Provider Taxonomy Deleted Date From Payer Enrollment ",bca
+1118,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.ansiSpecialtyDeletedDate","Medical Group Taxonomy Deleted Date ",bca
+1119,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4PatientNextAppointmentTime","New York Workers Comp C-4 OT-PT Next Appointment Time ",bca
+1120,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.therapyBeginDateInvalidFlag","DME Therapy Begin Date Invalid Flag ",bca
+1121,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.abgTestDateInvalidFlag","ABG Test Date Invalid Flag ",bca
+1122,"Give Business name for DecisionResponse.scrubbedClaim.claim.anesthesia.manualFormatting","Manual Formatting ",bca
+1123,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.historicalTransactions","Historical Transactions ",bca
+1124,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4Condition","New York Workers Comp C-4 OT-PT Patient Condition ",bca
+1125,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.ubForm.dischargeHour","Discharge Hour ",bca
+1126,"Give Business name for DecisionResponse.scrubbedClaim.claim.referralAuthorization.patientInsuranceId","Refferal Auth Patient Insurance ID ",bca
+1127,"Give Business name for (Primary Payer).insurancePackage.referringProviderNumber.providerNumber","Primary Referring Provider Number ",bca
+1128,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dialysis.validFields","Dialysis Valid Fields ",bca
+1129,"Give Business name for (Secondary Payer).insurancePackage.destinationOverrides.id","Secondary Routing Insurance Package ID ",bca
+1130,"Give Business name for DecisionResponse.scrubbedClaim.claim.icdCodeAllInfo","Claim Level Codes ",bca
+1131,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2CertificationRevisionDateInvalidFlag","Oxygen Certification Revision Date Invalid Flag ",bca
+1132,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4Evaluation","New York Workers Comp C-4 OT-PT Evaluation ",bca
+1133,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.certificationRevisionDateInvalidFlag","DME Certification Revision Date Invalid Flag ",bca
+1134,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2SaturationTestDateInvalidFlag","Oxygen Saturation Test Date Invalid Flag ",bca
+1135,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.medicalGroup.groupNumber.ansiSpecialtyDeletedDate","Medical Group Number Taxonomy Deleted Date ",bca
+1136,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.insuranceReportingCategory.groupId","Insurance Reporting Category Group ID ",bca
+1137,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.lastCertificationDateInvalidFlag","DME Last Certification Date Invalid Flag ",bca
+1138,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4AuthYN","New York Workers Comp C-4 OT-PT Treatment Plan Authorized Flag ",bca
+1139,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.preexistingInjuryCondition","New York Workers Comp C-4 OT-PT Patient History Or Pre-Existing Condition ",bca
+1140,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormat.palmetto","Claim Formats Palmetto ",bca
+1141,"Give Business name for (Primary Payer).eraRecords[1].payorControlNumber","Payor Control Number ",bca
+1142,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4ReferralReason","New York Workers Comp C-4 OT-PT Referral Reason ",bca
+1143,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.ptDoAnyTypeOfWork","Ptdoanytypeofwork ",bca
+1144,"Give Business name for DecisionResponse.activeInsurance.auxiliaryFormat.processingType","Active Insurance Auxiliary Format Processing Type ",bca
+1145,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.anotherPartyResponsibleYN","Another Party Responsible For Claim Flag ",bca
+1146,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4TreatmentsRendered","New York Workers Comp C-4 OT-PT Treatment Rendered ",bca
+1147,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimRecordNumbers","Claim Record Numbers ",bca
+1148,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4TreatmentFrequency","New York Workers Comp C-4 OT-PT Treatment Frequency ",bca
+1149,"Give Business name for DecisionResponse.scrubbedClaim.claim.ruleFlags.holdForNotDayOffYN","Hold For Day Not Off Flag ",bca
+1150,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.describeWorkCapacity","Describeworkcapacity ",bca
+1151,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2TherapyBeginDateInvalidFlag","Oxygen Therapy Begin Date Invalid Flag ",bca
+1152,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.hospice.referringProviderNumber","Hospice ReferringProvider Number ",bca
+1153,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.medicalGroupPhone","Provider matched phone ",bca
+1154,"Give Business name for DecisionResponse.scrubbedClaim.claim.ruleFlags.otherSourceIndicator","Other Source Indicator ",bca
+1155,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4PatientNextAppointmentUnits","New York Workers Comp C-4 OT-PT Next Appointment Units ",bca
+1156,"Give Business name for (Secondary Payer).insurancePackage.supervisingProviderNumber.legacyNumber","Secondary Supervising Provider Legacy Number ",bca
+1157,"Give Business name for DecisionResponse.scrubbedClaim.claim.settings.clia.cliaLocation","CLIA Field Location for CMS 1500 ",bca
+1158,"Give Business name for DecisionResponse.scrubbedClaim.claim.workersCompensation.nyForm.dateOfPreviousReport","New York Workers Comp C-4 Date Of Previous Report ",bca
+1159,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderNumber.ansiSpecialtyDeletedDate","Supervising Provider Taxonomy Deleted Date From Payer Enrollment ",bca
+1160,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4PatientNextAppointmentYN","New York Workers Comp C-4 OT-PT Next Appointment Flag ",bca
+1161,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.paperWork.paperWorkYN","Paperwork Flag ",bca
+1162,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4ReferredBackYN","New York Workers Comp C-4 OT-PT Patient Referred Back Flag ",bca
+1163,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.ansiSpecialtyDeletedDate","Supervising Provider Taxonomy Deleted Date ",bca
+1164,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.ansiSpecialtyId","Medical Group Taxonomy ID ",bca
+1165,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.renderingProviderNumber.ansiSpecialtyId","Rendering Provider Taxonomy ID From Payer Enrollment ",bca
+1166,"Give Business name for DecisionResponse.context.contractTypeId","Claim Contract Type ",bca
+1167,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4TreatmentPeriodUnits","New York Workers Comp C-4 OT-PT Treatment Period Units ",bca
+1168,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.referringProvider.ansiSpecialtyDeletedDate","Referring Provider Taxonomy Deleted Date ",bca
+1169,"Give Business name for SelfPay.Execute(Secondary Payer)","Secondary Self Pay Flag ",bca
+1170,"Give Business name for DecisionResponse.scrubbedClaim.claim.remittance.primaryDenied","Claim Denied by Primary Payer YN ",bca
+1171,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.nyForm.c4TreatmentPeriodTime","New York Workers Comp C-4 OT-PT Treatment Period ",bca
+1172,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.ansiSpecialtyDeletedDate","Rendering Provider Taxonomy Deleted Date ",bca
+1173,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.ansiSpecialtyAnsiCode","Medical Group Taxonomy Code ",bca
+1174,"Give Business name for DecisionResponse.scrubbedClaim.claim.anesthesia.siblingClaims","Sibling Claims ",bca
+1175,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.supervisingProviderEnrollmentStatus.npiOnFileStatusId","Provider NPI On File ",bca
+1176,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.guarantor.address.countryId","Guarantor Country ID ",bca
+1177,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.supervisingProvider.entityType.id","Supervising Provider Entity Type ID ",bca
+1178,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.relationshipToInsured.id","Patient Relationship To Guarantor ID ",bca
+1179,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.status.primaryDenied","Primary Charge Denied Flag ",bca
+1180,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.anesthesiaStartTime","Charge Anesthesia Start Time ",bca
+1181,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.anesthesiaEndTime","Charge Anesthesia End Time ",bca
+1182,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges[].{0}.anesthesiaTimeSheetData.physicalStatusModifier","Anesthesia Time Sheet Physical Status Modifier ",bca
+1183,"Give Business name for Charge.overrideLegacyRuleIds","Overridden Flag ",bca
+1184,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.checkDemographics).checkDemographicsValue","Eligibility Patient Date of Birth ",bca
+1185,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.wellChildCare.epsdtReferralReasons[2]","EPSDT Second Referral Reason ",bca
+1186,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.wellChildCare.epsdtReferralReasons[3]","EPSDT Third Referral Reason ",bca
+1187,"Give Business name for DecisionResponse.claim.charges.anesthesiaProviders.id","Anesthesia Directing Provider ID ",bca
+1188,"Give Business name for Reference Data.visitDetails.visitCharges.visitChargeId, DecisionResponse.claim.charges.rolledUpCharges.visitChargeid"","Visit Charge ID ",bca
+1189,"Give Business name for DecisionResponse.refData.chargeAmounts.description","Fee Schedule Procedure Code Description ",bca
+1190,"Give Business name for DecisionResponse.refData.chargeAmounts.procedureCodeGroupId","Fee Schedule Procedure Code Group ID ",bca
+1191,"Give Business name for DecisionResponse.Claim.workersCompensation.nyForm.injuryCity","New York Workers Comp C-4 Address Where Injury Occurred ",bca
+1192,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.createdDate","Charge Created Date ",bca
+1193,"Give Business name for DecisionResponse.scrubbedClaim.claim.billingGroup.claimType","Billing Group Claim Type ",bca
+1194,"Give Business name for charge.nonCoveredProcedureCode","Non-Covered Procedure Code Flag ",bca
+1195,"Give Business name for DecisionResponse.activeInsurance.eligibility.benefits.mSeg.messages","Eligibility Message Segment ",bca
+1196,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.referringProviderNumber.id","Referring Provider Number ID ",bca
+1197,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.baseUnits","Anesthesia Base Unit Mapping ",bca
+1198,"Give Business name for DecisionResponse.refData.ttransactions.transactionReasonId","Reference Data Transactions Transaction Reason ID ",bca
+1199,"Give Business name for DecisionResponse.refData.ttransactions.parentChargeId","Reference Data Transactions Parent Charge ID ",bca
+1200,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.outsideFacilityCliaNumberRequiredYN","Charge Level CLIA Required For Outside Facility Flag ",bca
+1201,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.serviceAddons.dme.feeScheduleCategoryCode","Charge DME Fee Schedule Category Code ",bca
+1202,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.attachmentTransmissionCode","Charge Attachment Transmission Code ",bca
+1203,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.immunization.batchNumber, DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.immunization.batchNumber"","Immunization Lot Number ",bca
+1204,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.certificationRevisionDate","Certification Revision Date For Formatting ",bca
+1205,"Give Business name for DecisionResponse.activeInsurance.eligibility.benefits.monetaryAmount","Eligibility Monetary Amount ",bca
+1206,"Give Business name for DecisionResponse.activeInsurance.eligibility.benefits.planNetwork","Eligibility Plan Network Indicator ",bca
+1207,"Give Business name for DecisionResponse.scrubbedClaim.claim.nyMedicaidSeparateTransferLines","NYMcaidHCFA Separate Transfer Lines ",bca
+1208,"Give Business name for (DecisionResponse.activeInsurance.eligibility.benefits).relatedEntity.idType)","Eligibility Related Entity ID Types ",bca
+1209,"Give Business name for DecisionResponse.activeInsurance.eligibility.benefits.relatedEntity.identificationNumber","Eligibility Related Entity Identifiers ",bca
+1210,"Give Business name for DecisionResponse.claim.Charges.bilateralSurgeryFlag","Bilateral Surgery Flag ",bca
+1211,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.cosurgeryFlag","Co-Surgery Flag ",bca
+1212,"Give Business name for (PatientOrInsuranceBKM.Fetch Secondary PayerDecisionResponse).insurancePackage.mspInsuranceTypeCode","Medicare Secondary Payer Insurance Type Code ",bca
+1213,"Give Business name for DecisionResponse.scrubbedClaim.claim.completeCharges.isOrphan","Procedure Code Orphan Flag ",bca
+1214,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.fieldName","Charge Audit Field Name ",bca
+1215,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.newValue","Charge Audit Field New Value ",bca
+1216,"Give Business name for DecisionResponse.scrubbedClaim.claim.charges.oldValue","Charge Audit Field Old Value ",bca
+1217,"Give Business name for DecisionResponse.refData.patientInsurances.subscriber.lastname","Policy Holder Last Name With Special Characters ",bca
+1218,"Give Business name for DecisionResponse.refData.patientInsurances.subscriber.nameSuffix","Policy Holder Name Suffix With Special Characters ",bca
+1219,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.cmnQuestions.number","CMN Question Number Type ",bca
+1220,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.cmnQuestions.additionalInfo","CMN Question Additional Info Type ",bca
+1221,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.cmnQuestions.percent","CMN Question Percent Type ",bca
+1222,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.extraClaimFields.fieldName","Reference Data Ambulance Signature File Name ",bca
+1223,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.extraClaimFields.data","Reference Data Ambulance Trip Signature Type ",bca
+1224,"Give Business name for  DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.labCheckbox","Palmetto Fax Cover Sheet Lab Checkbox ",bca
+1225,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.podiatryCheckbox","Palmetto Fax Cover Sheet Podiatry Checkbox ",bca
+1226,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.anesthesiaCheckbox","Palmetto Fax Cover Sheet Anesthesia Checkbox ",bca
+1227,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.radiologyCheckbox","Palmetto Fax Cover Sheet Radiology Checkbox ",bca
+1228,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.ambulanceCheckbox","Palmetto Fax Cover Sheet Ambulance Checkbox ",bca
+1229,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.chiropracticCheckbox","Palmetto Fax Cover Sheet Chiropractic Checkbox ",bca
+1230,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.otherCheckbox","Palmetto Fax Cover Sheet Other Checkbox ",bca
+1231,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.palmetto.surgeryCheckbox","Palmetto Fax Cover Sheet Surgery Checkbox ",bca
+1232,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimFormat","Active Insurance Claim Format ID ",bca
+1233,"Give Business name for Charge.medicareStatusCode","Medicare Status Code ",bca
+1234,"Give Business name for DecisionResponse.scrubbedClaim.claim.charge.serviceDays","Charge Service Days ",bca
+1235,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.capwizards.id","Capitation Wizard ID ",bca
+1236,"Give Business name for DecisionResponse.scrubbedClaim.referenceData.capwizards.deleted","Capitation Wizard Deleted Date ",bca
+1237,"Give Business name for DecisionResponse.scrubbedClaim.claim.attachments.createdBy","Attachment Created By ",bca
+1238,"Give Business name for DecisionResponse.scrubbedClaim.claim.historicalNotes.claimId","Claim Note Claim ID ",bca
+1239,"Give Business name for DecisionResponse.scrubbedClaim.claim.historicalNotes.patientInsuranceId","Claim Note Patient Insurance ID ",bca
+1240,"Give Business name for charge.primaryDenialERAKickCode","Charge Primary Denial ERA Kick Code ",bca
+1241,"Give Business name for DecisionResponse.scrubbedClaim.claim.patient.insurances.diagnosiscodesicd10","Patient Insurance Accepted ICD-10 Diagnosis Codes ",bca
+1242,"Give Business name for DecisionResponse.scrubbedClaim.claim.facilityCodes.valueCodes.valueCode09","Value Code 09 ",bca
+1243,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.ubForm.admissionSource","Admission Source ",bca
+1244,"Give Business name for DecisionResponse.scrubbedClaim.claim.claimFormats.ubForm.admissionType","Admission Type ",bca
+1245,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.attendingProvider.ssn","Attending Provider SSN ",bca
+1246,"Give Business name for DecisionResponse.scrubbedClaim.claim.medicalGroup.providerGroup.providers.renderingProvider.ssn","Rendering Provider SSN ",bca
+1247,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.o2SaturationTestDate","Oxygen Saturation Test Date ",bca
+1248,"Give Business name for DecisionResponse.scrubbedClaim.claim.specialtyFieldGroup.dme.abgTestDate","ABG Test Date ",bca
+1249,"Give Business name for DecisionResponse.activeInsurance.insurancePackage.claimSubmissionCategory.overrideId","Active Alternate Claim Submission Category ID ",bca
